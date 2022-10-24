@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hszzzx&#39;s Blog">
+<meta property="og:url" content="https://hszzzx.github.io/page/2/">
+<meta property="og:site_name" content="Hszzzx&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Hszzzx">
+<meta property="article:tag" content="OI">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://hszzzx.github.io/page/2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hszzzx's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Hszzzx's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">我们所度过的每个平凡的日常，也许就是连续发生的奇迹</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Hszzzx</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/2022/10/23/About-Me/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/23/About-Me/" class="post-title-link" itemprop="url">About Me</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-23 11:22:55" itemprop="dateCreated datePublished" datetime="2022-10-23T11:22:55+08:00">2022-10-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-24 14:14:30" itemprop="dateModified" datetime="2022-10-24T14:14:30+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome，这里是 Hszzzx 瞎写东西的地方。</p>
+<p>坐标 HE，初二蒟蒻，喜欢喝茶和拿铁。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/676412">洛谷</a></p>
+<p>Email : <a href="mailto:&#104;&#x73;&#122;&#x7a;&#x7a;&#x78;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#104;&#x73;&#122;&#x7a;&#x7a;&#x78;&#64;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/2022/10/20/%E6%94%BF%E6%B2%BB%E4%B8%8E%E7%89%A9%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/20/%E6%94%BF%E6%B2%BB%E4%B8%8E%E7%89%A9%E7%90%86/" class="post-title-link" itemprop="url">政治与物理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-20 14:00:55" itemprop="dateCreated datePublished" datetime="2022-10-20T14:00:55+08:00">2022-10-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-24 14:52:00" itemprop="dateModified" datetime="2022-10-24T14:52:00+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>“好久不见，政治。”物理微笑道。政治依然是那副波澜不惊的神色，眼底幽寂，深不可测。</p>
+<p>他一步步地走向了政治：“身为文综最强的你，是唯一有资格成为我对手的学科。”政治从容不迫地回答道：“阁下谬赞了。”声音低沉如故。</p>
+<p>物理只觉得恶心。</p>
+<p>政治生着一张永远年轻的脸孔，尽管这张脸会随着岁月的变迁而改变样貌，却从未被岁月划下一丝皱纹。他习惯摆出一副沉稳谦逊的模样，可物理清楚，这个不老不死的诡异学科内里是如何老奸巨猾。</p>
+<p>一枚硬币从物理手中脱离，完成了一次完美的自由落体运动，恰恰落在二人直线距离的中央。“正面，我先出手。”物理毫不客气地公布结果。政治微眯凤眸，唇角，是一丝不易察觉的弧度。</p>
+<p>“力改变物体的运动状态！”</p>
+<p>物理向一个特殊的角度有力地喝道，声波触碰到了摆在空间中的石膏几何体，大大小小的几何体忽然开始缓缓地匀速直线运动起来。</p>
+<p>“加速度正向递增。”物理双手一挥，几何体旋即向政治的方向迅速撞去。</p>
+<p>政治的脸上没有丝毫惧色。</p>
+<p>“富强民主文明和谐，爱国敬业诚信友善。”两道防护墙凭空腾起，挡住了石膏几何体的攻击。</p>
+<p>“马克思主义哲学为具体科学的研究提供正确的世界观和方法论！”</p>
+<p>刹那间，两道防护墙幻化成利刃向物理刺去。物理敏捷一闪躲过了攻击，两道利刃却穷追不舍。物理暗骂道：“该死的，竟然这么快就就启用必修四！”</p>
+<p>“理想条件下物体总保持静止或匀速直线运动！”两道利刃的速度依旧迅猛，但不再改变追击方向和加速度。物理灵巧地改变逃跑方向：“视重为零时，物体完全失重！”两道利刃撞在了一道顺空而起的墙上，哐当跌落在地。</p>
+<p>“价格围绕价值上下波动！”</p>
+<p>两道利刃忽然如同活了起来般，腾空而起向物理疯狂袭击，物理还没来得及躲避便被利刃划伤了背部。“贫富差距影响社会总体消费水平。”</p>
+<p>两道利刃左右相逼，物理的身上又新添了两道伤。</p>
+<p>该死的，这不行！再被他划两道游戏就结束了！</p>
+<p>于是物理大声喊道：“初速度等于末速度减去加速度与时间之积！”奇迹出现了，两道利刃的主动权迅速转移到了物理的手中，“量不够，a来凑！”利刃改变运动方向，转而向政治刺去。</p>
+<p>政治的眼底忽然闪过了一丝涟漪，但又迅速恢复了平静。“国家应以经济建设为中心，大力发展生产力。”两道利刃蓦然静止。</p>
+<p>“AABCD。”</p>
+<p>物理猛然诧异。他完全没有想过，政治会使用选择题答案作弊。几何体，防护墙，利刃，统统幻灭为了尘埃。</p>
+<p>……</p>
+<p>物理举起了双手。</p>
+<p>政治满意地笑了。“果然，你永远都是笑到最后的赢家。”物理不甘地看着他。</p>
+<p>当政治转身的一瞬间，物理冷冷地道：“AC DB AB DD AD ABCD”</p>
+<p>政治的背后迅速被划下五道裂痕。</p>
+<p>“别忘了，物理选择题的分值比政治多得多。”</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/2022/10/06/10.6%E9%A2%98%E8%A7%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/06/10.6%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">10.6 模拟赛</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-06 18:30:45" itemprop="dateCreated datePublished" datetime="2022-10-06T18:30:45+08:00">2022-10-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-24 14:53:18" itemprop="dateModified" datetime="2022-10-24T14:53:18+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/06/10.6%E9%A2%98%E8%A7%A3/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/2022/10/03/10.3%E8%80%83%E8%AF%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/03/10.3%E8%80%83%E8%AF%95/" class="post-title-link" itemprop="url">10.3 考试</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-03 18:22:55" itemprop="dateCreated datePublished" datetime="2022-10-03T18:22:55+08:00">2022-10-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-24 14:48:08" itemprop="dateModified" datetime="2022-10-24T14:48:08+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/10/03/10.3%E8%80%83%E8%AF%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/2022/09/12/%E4%B8%BB%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/12/%E4%B8%BB%E5%AE%9A%E7%90%86/" class="post-title-link" itemprop="url">主定理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-09-12 11:29:55" itemprop="dateCreated datePublished" datetime="2022-09-12T11:29:55+08:00">2022-09-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-24 14:56:58" itemprop="dateModified" datetime="2022-10-24T14:56:58+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>假设有递推关系式 $T(n) &#x3D; aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\frac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
+<ol>
+<li><p>若 $f(n) &#x3D; O(n^{\log_b a-\varepsilon})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a})$。</p>
+</li>
+<li><p>若 $f(n) &#x3D; \Theta(n^{\log_b a})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a}\log n)$</p>
+</li>
+<li><p>若 $f(n) &#x3D; \Omega(n^{\log_b a+\varepsilon})$ ，$\varepsilon &gt; 0$ ，且对于某个常数 $c &lt; 1$ 和所有充分大的 $n$，有 $af(\frac n b) \leq cf(n)$ ，那么 $T(n) &#x3D; \Theta(f(n))$</p>
+</li>
+</ol>
+<h2 id="人话翻译"><a href="#人话翻译" class="headerlink" title="人话翻译"></a>人话翻译</h2><ol>
+<li><p>找出 $a, b$，计算 $\log _b a$。</p>
+</li>
+<li><p>找到 $f(n)$ ， 找出它的次数 $k$。</p>
+</li>
+<li><p>比较 $\log_b a$ 与 $k$ 。</p>
+<ul>
+<li><p>若 $\log_b a &gt; k$，则时间主要消耗在递归上，$T(n) &#x3D; \Theta(n^{log_b a})$。</p>
+</li>
+<li><p>若 $\log_b a &#x3D; k$，则时间在递归和递归外的计算上消耗相等，$T(n) &#x3D; \Theta(n^{log_b a}\log n)$。</p>
+</li>
+<li><p>若 $\log_b a &lt; k$，则时间主要消耗在递归之外的计算上，$T(n) &#x3D; \Theta(f(n))$。</p>
+</li>
+<li><p>当 $f(n) &#x3D; \Theta (n^{\log_b a}\log^kn)$，其中 $k \geq 1$ 且为一个常数，则有 $T(n) &#x3D; \Theta (n^{\log_b a}\log^{k+1}n)$</p>
+<p>（感谢 @<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/469356">Anna黛娜</a> 的补充）</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="实践一下"><a href="#实践一下" class="headerlink" title="实践一下"></a>实践一下</h2><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/t0qvhv6z.png"></p>
+<ol>
+<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(n\log n)$。</p>
+</li>
+<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 1.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n)$。</p>
+</li>
+<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 0.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(\log n)$。</p>
+</li>
+<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.5.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n\sqrt n)$。</p>
+</li>
+</ol>
+<h2 id="还有一点"><a href="#还有一点" class="headerlink" title="还有一点"></a>还有一点</h2><ol>
+<li><p>$T(n) &#x3D; 2^n T(\frac n 2) + n^n $</p>
+<blockquote>
+<p><strong>此处不满足主定理，$a$ 不是常数</strong></p>
+</blockquote>
+</li>
+<li><p>$T(n) &#x3D; 16T(\frac n 4) + n$</p>
+<blockquote>
+<p>$a &#x3D; 16, b &#x3D; 4, f(n) &#x3D; n, \log_b a &#x3D; 2, 2 &gt; 1$，适用于主定理第一种情况，$T(n) &#x3D; \Theta(n^2)$。</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1017">NOIP 2015 T19</a></p>
+<blockquote>
+<p>某算法的计算时间表示为递推关系式 $T(n) &#x3D; T(n - 1) + n$（$n \in N^*$ ）及 $T(0)&#x3D;1$，则该算法的时间复杂度为（${\color{green}D}$）。</p>
+</blockquote>
+<blockquote>
+<p>A. $O(\log n)$<br>B. $O(n\log n) $<br>C. $O(n)$<br>D. $O(n^2)$</p>
+<p>解析：<strong>此处不满足主定理</strong><br>$ \therefore n + (n - 1) + (n - 2) + … +1 &#x3D; \sum\limits_{i &#x3D; 1}^n i &#x3D; \frac{(1+n)n}2 $<br>取最高项次数，复杂度为 $O(n^2)$。</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1022">2017 NOIP提高组 T6</a></p>
+<blockquote>
+<p>若某算法的计算时间表示为递推关系式：</p>
+<ul>
+<li><p>$T(N) &#x3D; 2T(\dfrac{N}{2}) + N \log N$</p>
+</li>
+<li><p>$T(1) &#x3D; 1$</p>
+<p>则该算法的时间复杂度为（${\color{green}C}$）。</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>A.$O(N)$</p>
+<p>B.$O(N \log N)$</p>
+<p>C.$O(N \log^2 N)$</p>
+<p>D.$O(N^2)$</p>
+</blockquote>
+<blockquote>
+<p>解：</p>
+<p>$\log_ba &#x3D; 1$。当 $k &#x3D; 0$ 时，</p>
+<p>$\begin{aligned}<br> f(N) &amp;&#x3D; \Theta (N^{\log_b a}\log^kN)\<br> &amp;&#x3D;\Theta(N\log N)<br> \end{aligned}$</p>
+<p>故</p>
+<p>$\begin{aligned}<br> T(n) &amp;&#x3D; \Theta (n^{\log_b a}\log^{k+1}n)\<br> &amp;&#x3D; \Theta(N^{1}\log^{1 + 1} N)\&amp;&#x3D;\Theta(N\log^2 N)<br> \end{aligned}$</p>
+<p>（感谢 @<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/388651">5k_sync_closer</a> 的指正）</p>
+</blockquote>
+</li>
+</ol>
+<p>如有不足之处，恳请斧正。（我丢人显眼）</p>
+<p><del>轻喷</del></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/2022/08/21/8.21-T3-laundry/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/08/21/8.21-T3-laundry/" class="post-title-link" itemprop="url">T3 laundry</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-08-21 14:45:00" itemprop="dateCreated datePublished" datetime="2022-08-21T14:45:00+08:00">2022-08-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-24 14:46:00" itemprop="dateModified" datetime="2022-10-24T14:46:00+08:00">2022-10-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          这里有东西被加密了，需要输入密码查看哦。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/08/21/8.21-T3-laundry/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hszzzx</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","perpage":true,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
