@@ -24,7 +24,7 @@
     <meta name="description" content="Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 &#x2F; 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（蓝Dev 还不支持 C++14）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ STL">
-<meta property="og:url" content="https://hszzzx.github.io/C-STL.html">
+<meta property="og:url" content="https://hszzzx.github.io/Cpp-STL.html">
 <meta property="og:site_name" content="Hszzzx&#39;s Blog">
 <meta property="og:description" content="Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 &#x2F; 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（蓝Dev 还不支持 C++14）">
 <meta property="og:locale" content="zh_CN">
@@ -35,11 +35,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://hszzzx.github.io/C-STL.html">
+<link rel="canonical" href="https://hszzzx.github.io/Cpp-STL.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hszzzx.github.io/C-STL.html","path":"C-STL.html","title":"C++ STL"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hszzzx.github.io/Cpp-STL.html","path":"Cpp-STL.html","title":"C++ STL"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>C++ STL | Hszzzx's Blog</title>
@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Containter%EF%BC%88%E5%AE%B9%E5%99%A8%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Containter（容器）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">1.1.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#priority-queue"><span class="nav-number">1.2.</span> <span class="nav-text">priority_queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">1.3.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiset"><span class="nav-number">1.4.</span> <span class="nav-text">multiset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-set"><span class="nav-number">1.5.</span> <span class="nav-text">unordered_set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">1.6.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-map"><span class="nav-number">1.7.</span> <span class="nav-text">unordered_map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bitset"><span class="nav-number">1.8.</span> <span class="nav-text">bitset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pair"><span class="nav-number">1.9.</span> <span class="nav-text">pair</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm%EF%BC%88%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">Algorithm（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cin-cout%E8%AF%BB%E5%85%A5%E4%BC%98%E5%8C%96%EF%BC%88%E5%85%B3%E9%97%AD%E6%B5%81%E5%90%8C%E6%AD%A5%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">cin&#x2F;cout读入优化（关闭流同步）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-element"><span class="nav-number">2.2.</span> <span class="nav-text">nth_element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#next-permutation"><span class="nav-number">2.3.</span> <span class="nav-text">next_permutation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">2.4.</span> <span class="nav-text">generate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate-n"><span class="nav-number">2.5.</span> <span class="nav-text">generate_n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcd"><span class="nav-number">2.6.</span> <span class="nav-text">__gcd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#max-initializer-list-min-initializer-list"><span class="nav-number">2.7.</span> <span class="nav-text">max({initializer_list}), min({initializer_list})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-number">2.8.</span> <span class="nav-text">reverse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lower-bound"><span class="nav-number">2.9.</span> <span class="nav-text">lower_bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upper-bound"><span class="nav-number">2.10.</span> <span class="nav-text">upper_bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unique"><span class="nav-number">2.11.</span> <span class="nav-text">unique</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort-lambada%E5%BC%95%E5%87%BA%E7%AC%A6"><span class="nav-number">2.12.</span> <span class="nav-text">sort(lambada引出符[])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fill"><span class="nav-number">2.13.</span> <span class="nav-text">fill</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count"><span class="nav-number">2.14.</span> <span class="nav-text">count</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cmath%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">cmath库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%80%E8%AF%B4"><span class="nav-number">4.</span> <span class="nav-text">简单说一说</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Containter%EF%BC%88%E5%AE%B9%E5%99%A8%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">Containter（容器）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vector"><span class="nav-number">1.1.</span> <span class="nav-text">vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#priority-queue"><span class="nav-number">1.2.</span> <span class="nav-text">priority_queue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">1.3.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multiset"><span class="nav-number">1.4.</span> <span class="nav-text">multiset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-set"><span class="nav-number">1.5.</span> <span class="nav-text">unordered_set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">1.6.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unordered-map"><span class="nav-number">1.7.</span> <span class="nav-text">unordered_map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bitset"><span class="nav-number">1.8.</span> <span class="nav-text">bitset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pair"><span class="nav-number">1.9.</span> <span class="nav-text">pair</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm%EF%BC%88%E7%AE%97%E6%B3%95%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">Algorithm（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cin-x2F-cout%E8%AF%BB%E5%85%A5%E4%BC%98%E5%8C%96%EF%BC%88%E5%85%B3%E9%97%AD%E6%B5%81%E5%90%8C%E6%AD%A5%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">cin&#x2F;cout读入优化（关闭流同步）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nth-element"><span class="nav-number">2.2.</span> <span class="nav-text">nth_element</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#next-permutation"><span class="nav-number">2.3.</span> <span class="nav-text">next_permutation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">2.4.</span> <span class="nav-text">generate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate-n"><span class="nav-number">2.5.</span> <span class="nav-text">generate_n</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcd"><span class="nav-number">2.6.</span> <span class="nav-text">__gcd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#max-initializer-list-min-initializer-list"><span class="nav-number">2.7.</span> <span class="nav-text">max({initializer_list}), min({initializer_list})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reverse"><span class="nav-number">2.8.</span> <span class="nav-text">reverse</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lower-bound"><span class="nav-number">2.9.</span> <span class="nav-text">lower_bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#upper-bound"><span class="nav-number">2.10.</span> <span class="nav-text">upper_bound</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unique"><span class="nav-number">2.11.</span> <span class="nav-text">unique</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort-lambada%E5%BC%95%E5%87%BA%E7%AC%A6"><span class="nav-number">2.12.</span> <span class="nav-text">sort(lambada引出符[])</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fill"><span class="nav-number">2.13.</span> <span class="nav-text">fill</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count"><span class="nav-number">2.14.</span> <span class="nav-text">count</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cmath%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">cmath库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%80%E8%AF%B4"><span class="nav-number">4.</span> <span class="nav-text">简单说一说</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -237,7 +237,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/C-STL.html">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/Cpp-STL.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
@@ -286,8 +286,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 / 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（蓝Dev 还不支持 C++14）</p>
+        <p>Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 &#x2F; 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（蓝Dev 还不支持 C++14）</p>
 <span id="more"></span>
+
 <p>不声明下，区间均为<a target="_blank" rel="noopener" href="https://www.cnblogs.com/CNLayton/p/14931381.html">左闭右开区间</a>，<code>typename</code> 表示一个数据类型而不是 C++ 的关键字</p>
 <h2 id="Containter（容器）"><a href="#Containter（容器）" class="headerlink" title="Containter（容器）"></a>Containter（容器）</h2><h3 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h3><p><code>vector&lt;typename&gt; v</code>：声明一个内部元素为 <code>typename</code> 的可变长度数组 v</p>
 <p><code>v.begin()</code>：返回 v 首元素的迭代器</p>
@@ -308,10 +309,13 @@
 <p><code>v.clear()</code>：将所有元素置零，<strong>并不释放空间</strong></p>
 <p>如欲释放空间</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">ClearV</span><span class="params">(vector&lt;<span class="type">int</span>&gt; &amp;a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; b;</span><br><span class="line">    b.<span class="built_in">swap</span>(a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">ClearV</span>(a);</span><br><span class="line"><span class="comment">//当然，a现在不能使用了</span></span><br></pre></td></tr></table></figure>
+
 <p>遍历（C++11及以上）（CSP已支持 C++14）</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : a)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; i;</span><br><span class="line">&#125;<span class="comment">//此方法中i的改变并不会改变a中的值</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;&amp;i : a)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; i;</span><br><span class="line">&#125;<span class="comment">//此方法中i的改变会改变a中的值</span></span><br></pre></td></tr></table></figure>
+
 <p>C++11以下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (vector&lt;<span class="type">int</span>&gt;::iterator it = a.<span class="built_in">begin</span>(); it != v.<span class="built_in">end</span>(); ++it)</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; (*it);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="priority-queue"><a href="#priority-queue" class="headerlink" title="priority_queue"></a>priority_queue</h3><p>定义：</p>
 <ol>
 <li><p>小根堆：</p>
@@ -322,7 +326,9 @@
 </ol>
 <p>小根堆定义中第三个参数为小于比较方式，大根堆可重载运算符变为小根堆</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Node &amp;ovo) <span class="type">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>-&gt;b &lt; ovo.b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">priority_queue&lt;Node&gt; Q;<span class="comment">//按照b从大到小排</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> Node &amp;ovo) <span class="type">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>-&gt;b &gt; o.b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">priority_queue&lt;Node&gt; Q;<span class="comment">//按照b从小到大排</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>集合（每个元素只会出现一次）</p>
 <p>内部使用红黑树实现，有序。</p>
 <p>定义：<code>set&lt;typename&gt; a;</code></p>
@@ -342,12 +348,14 @@
 <p><code>a.erase(iterator)</code>：删除 <code>iterator</code> 所指向的元素</p>
 <p>例：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">multiset&lt;<span class="type">int</span>&gt; a;</span><br><span class="line">a.<span class="built_in">insert</span>(<span class="number">1</span>), a.<span class="built_in">insert</span>(<span class="number">1</span>), a.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">a.<span class="built_in">insert</span>(<span class="number">5</span>), a.<span class="built_in">insert</span>(<span class="number">1</span>), a.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">a.<span class="built_in">erase</span>(<span class="number">1</span>); <span class="comment">//set 还剩下 &#123;4, 5, 4&#125;;</span></span><br><span class="line">a.<span class="built_in">erase</span>(a.<span class="built_in">find</span>(<span class="number">1</span>)); <span class="comment">//set 还剩下 &#123;1, 4, 5, 1, 4&#125;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="unordered-set"><a href="#unordered-set" class="headerlink" title="unordered_set"></a>unordered_set</h3><p>定义：<code>unordered_set&lt;typename&gt; a;</code></p>
 <p>通过 hash 实现，常数大，内部无序，期望复杂度 $O(1)$，上界 $O(n)$（会被卡）</p>
 <h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>定义：<code>map&lt;typename1, typename2&gt; m;</code></p>
 <p>等价于 <code>set&lt;pair&lt;typename1, typename2&gt; &gt; m;</code></p>
 <p>遍历</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">map&lt;string, <span class="type">bool</span>&gt; m;</span><br><span class="line">m[<span class="string">&quot;I AK IOI&quot;</span>] = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;&amp;u : m)</span><br><span class="line">&#123;</span><br><span class="line">    u.first;<span class="comment">//&quot;IAKIOI&quot;</span></span><br><span class="line">    u.second;<span class="comment">//false</span></span><br><span class="line">    cout &lt;&lt; m[<span class="string">&quot;hsbhzz AK IOI&quot;</span>];</span><br><span class="line">    <span class="comment">//生成m[&quot;hsbhzz AK IOI&quot;],值为false;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><code>m.count(x)</code>：返回 <code>bool</code> ，x 是否存在</p>
 <h3 id="unordered-map"><a href="#unordered-map" class="headerlink" title="unordered_map"></a>unordered_map</h3><p>通过 <code>hash</code> 实现，期望复杂度 $O(1)$</p>
 <p>定义：<code>unordered_map&lt;typename1, typename2&gt; m;</code></p>
@@ -357,14 +365,15 @@
 <p><code>b.test(pos)</code>：返回 pos 的 value</p>
 <p>支持位运算</p>
 <p>单点修改 $O(1)$</p>
-<p>位运算 $O(n/\text{字长})$ 32位或64位</p>
+<p>位运算 $O(n&#x2F;\text{字长})$ 32位或64位</p>
 <h3 id="pair"><a href="#pair" class="headerlink" title="pair"></a>pair</h3><p>位于 <code>&lt;utility&gt;</code> 库中（被 <code>&lt;algorithm&gt;</code> 包含）</p>
 <p><code>pair&lt;string, int&gt; a</code> 声明一个 <code>first</code> 为 <code>string</code>，<code>second</code> 为 <code>int</code> 的二元组 a</p>
 <p>已定义默认比较器，<code>first</code> 第一关键字，<code>second</code> 第二关键字</p>
-<h2 id="Algorithm（算法）"><a href="#Algorithm（算法）" class="headerlink" title="Algorithm（算法）"></a>Algorithm（算法）</h2><h3 id="cin-cout读入优化（关闭流同步）"><a href="#cin-cout读入优化（关闭流同步）" class="headerlink" title="cin/cout读入优化（关闭流同步）"></a>cin/cout读入优化（关闭流同步）</h3><p>比快读快（by：一扶苏一）</p>
+<h2 id="Algorithm（算法）"><a href="#Algorithm（算法）" class="headerlink" title="Algorithm（算法）"></a>Algorithm（算法）</h2><h3 id="cin-x2F-cout读入优化（关闭流同步）"><a href="#cin-x2F-cout读入优化（关闭流同步）" class="headerlink" title="cin&#x2F;cout读入优化（关闭流同步）"></a>cin&#x2F;cout读入优化（关闭流同步）</h3><p>比快读快（by：一扶苏一）</p>
 <p><strong>警告！！！：在 <code>freopen()</code> 之后再写关闭流同步！！！</strong></p>
 <p>热知识：<code>return 0;</code> 会自动 <code>fclose();</code></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//cin, cout 关闭流同步</span></span><br><span class="line">ios::<span class="built_in">sync_sith_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>); cout.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br></pre></td></tr></table></figure>
+
 <p>使用后 <code>cin</code> 和 <code>printf</code> 不可混用, <code>cout</code> 和 <code>scanf</code> 不可混用</p>
 <p>使用 <code>endl</code> 会导致加速效果消失，建议使用 <code>&#39;\n&#39;</code></p>
 <p>当然，可以同时使用 <code>cin</code> 和 <code>printf</code>，或 <code>cout</code> 和 <code>scanf</code></p>
@@ -376,6 +385,7 @@
 <p><code>next_permutation(a.begin(), a.end());</code></p>
 <p>生成给定数列的严格下一个排列</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//枚举全排列要用do-while(毕竟还包含这个序列本身)</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//do sth</span></span><br><span class="line">&#125;<span class="keyword">while</span> (<span class="built_in">next_permutation</span>(a, a + i);</span><br></pre></td></tr></table></figure>
+
 <h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><p><code>generate(a.begin(), a.end(), ACTIVE);</code></p>
 <p>返回 <code>void</code></p>
 <p>作用：以 <code>ACTIVE</code> 的结果填充 $[\ a.begin(), a.end()\ )$ 的元素内容</p>
@@ -385,6 +395,7 @@
 <p>beautifully，你可以把自己写的快读放进去</p>
 <p>例：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="built_in">generate</span>(a, a + n, read);</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="built_in">generate_n</span>(a, n, read);</span><br><span class="line"><span class="comment">//还等价于</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) a[i] = <span class="built_in">read</span>();</span><br></pre></td></tr></table></figure>
+
 <h3 id="gcd"><a href="#gcd" class="headerlink" title="__gcd"></a>__gcd</h3><p>时间复杂度没有查</p>
 <p><code>__gcd(a, b);</code></p>
 <p>作用：返回 $\gcd(a,b)$</p>
@@ -396,6 +407,7 @@
 <p><code>reverse(a.begin(), a.end());</code></p>
 <p>作用：翻转给定数列</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string v = <span class="string">&quot;114514&quot;</span>;</span><br><span class="line">std::<span class="built_in">reverse</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="comment">// v = 415411</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="lower-bound"><a href="#lower-bound" class="headerlink" title="lower_bound"></a>lower_bound</h3><p><code>lower_bound(a.begin(), a.end(), x);</code></p>
 <p><strong>使用前需保证数列有序</strong></p>
 <p>$O(\log n)$</p>
@@ -406,6 +418,7 @@
 <p>作用：把一个<strong>有序序列</strong>去重，返回去重后数列的尾指针 + 1;</p>
 <p>如果是结构体，需要重载运算符 <code>==</code></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">bool</span> <span class="keyword">operator</span>==(Node x, Node y)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> x.a == y.a &amp;&amp; x.b == y.b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//重载运算符不太确定, 应该是可以的</span></span><br><span class="line"><span class="comment">//我也不会在结构体里重载(丢人现眼)</span></span><br></pre></td></tr></table></figure>
+
 <p>多的元素其实被<strong>放到了序列末尾</strong></p>
 <p>去重后元素的个数为 <code>unique(a.begin(), a.end()) - a.begin();</code></p>
 <h3 id="sort-lambada引出符"><a href="#sort-lambada引出符" class="headerlink" title="sort(lambada引出符[])"></a>sort(lambada引出符[])</h3><p><code>sort(v.begin(), v.end(), [](const int &amp;a, const int &amp;b) &#123;return a &gt; b;&#125;);</code></p>
@@ -483,12 +496,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/%E6%94%BF%E6%B2%BB%E4%B8%8E%E7%89%A9%E7%90%86.html" rel="prev" title="政治与物理">
+                <a href="/Politics-and-Physics.html" rel="prev" title="政治与物理">
                   <i class="fa fa-chevron-left"></i> 政治与物理
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/CSP-J-2022-%E6%B8%B8%E5%AF%84.html" rel="next" title="CSP-J 2022 游寄">
+                <a href="/CSP-J-2022-dairy.html" rel="next" title="CSP-J 2022 游寄">
                   CSP-J 2022 游寄 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -549,7 +562,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Hszzzx","repo":"hszzzx.github.io","client_id":"8603d2c02ce404804f22","client_secret":"490b341eb256461bcea9c3b887663246b7dd402a","admin_user":"Hszzzx","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"4fb646eabd53fc4fa329b6d7b462fd56"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Hszzzx","repo":"hszzzx.github.io","client_id":"8603d2c02ce404804f22","client_secret":"490b341eb256461bcea9c3b887663246b7dd402a","admin_user":"Hszzzx","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"c25259b6734b674f76645b61eabcd37c"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>

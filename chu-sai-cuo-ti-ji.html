@@ -24,7 +24,7 @@
     <meta name="description" content="洛谷有题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初赛错题集">
-<meta property="og:url" content="https://hszzzx.github.io/%E5%88%9D%E8%B5%9B%E9%94%99%E9%A2%98%E9%9B%86.html">
+<meta property="og:url" content="https://hszzzx.github.io/chu-sai-cuo-ti-ji.html">
 <meta property="og:site_name" content="Hszzzx&#39;s Blog">
 <meta property="og:description" content="洛谷有题">
 <meta property="og:locale" content="zh_CN">
@@ -38,11 +38,11 @@
 <meta name="twitter:image" content="http://luogu-ipic.oss-cn-shanghai.aliyuncs.com/youti/35.png">
 
 
-<link rel="canonical" href="https://hszzzx.github.io/%E5%88%9D%E8%B5%9B%E9%94%99%E9%A2%98%E9%9B%86.html">
+<link rel="canonical" href="https://hszzzx.github.io/chu-sai-cuo-ti-ji.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hszzzx.github.io/%E5%88%9D%E8%B5%9B%E9%94%99%E9%A2%98%E9%9B%86.html","path":"初赛错题集.html","title":"初赛错题集"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://hszzzx.github.io/chu-sai-cuo-ti-ji.html","path":"chu-sai-cuo-ti-ji.html","title":"初赛错题集"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>初赛错题集 | Hszzzx's Blog</title>
@@ -240,7 +240,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/%E5%88%9D%E8%B5%9B%E9%94%99%E9%A2%98%E9%9B%86.html">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/chu-sai-cuo-ti-ji.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
@@ -290,15 +290,16 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="洛谷有题"><a href="#洛谷有题" class="headerlink" title="洛谷有题"></a>洛谷有题</h2><span id="more"></span>
+
 <h3 id="NOIP-2018"><a href="#NOIP-2018" class="headerlink" title="NOIP 2018"></a><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1028">NOIP 2018</a></h3><h4 id="T9"><a href="#T9" class="headerlink" title="T9"></a>T9</h4><p>给定一个含N 个不相同数字的数组，在最坏情况下，找出其中最大或最小的数，至少需要N - 1 次比较操作。则最坏情况下，在该数组中同时找最大与最小的数至少需要（<strong>A</strong>）次比较操作。（$\lceil\rceil$表示向上取整，$\lfloor\rfloor$表示向下取整）</p>
-<p>A.⌈3N/2⌉-2</p>
-<p>B.⌊3N/2⌋-2</p>
+<p>A.⌈3N&#x2F;2⌉-2</p>
+<p>B.⌊3N&#x2F;2⌋-2</p>
 <p>C.2N-2</p>
 <p>D.2N-4</p>
 <p>解析：<br>如果分别找最大值、最小值，则至少都需要N-1次操作。</p>
 <p>同时找最大最小值，有更优化的方法，如果没有学过这个算法，本题只能根据题面猜测肯定小于2N-2。需在A和B里面蒙一个，50%几率。</p>
-<p>学过的话，按照下面的优化算法：<br>N为奇数时，比较次数为3*(N-1)/2 =(3N+1)/2 - 2</p>
-<p>N为偶数时，比较次数为1 +3*(N-2)/2 = 3N/2 – 2</p>
+<p>学过的话，按照下面的优化算法：<br>N为奇数时，比较次数为3*(N-1)&#x2F;2 &#x3D;(3N+1)&#x2F;2 - 2</p>
+<p>N为偶数时，比较次数为1 +3*(N-2)&#x2F;2 &#x3D; 3N&#x2F;2 – 2</p>
 <p>综合奇偶，显然答案为A</p>
 <p>找最大最小值的优化算法：</p>
 <p>初始值：</p>
@@ -314,7 +315,7 @@
 <p>小的元素与最小值比较，比最小值小则设为该元素。</p>
 <p>循环结束，得到最大、最小值。</p>
 <h3 id="NOIP-2017"><a href="#NOIP-2017" class="headerlink" title="NOIP 2017"></a><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1021">NOIP 2017</a></h3><h4 id="T19"><a href="#T19" class="headerlink" title="T19"></a>T19</h4><p>一家四口人，至少两个人生日属于同一月份的概率是（）（假定每个人生日属于每个月份的概率相同且不同人之间相互独立）。</p>
-<p>$ANS =\dfrac{41}{96} $</p>
+<p>$ANS &#x3D;\dfrac{41}{96} $</p>
 <p>思路：至少有两个人的生日在同一个月，包括 2、3、4 个人的生日在同一个月三种情况，直接算比较麻烦，从反面算，再用1减去。反面是：4 个人的生日都在不同月份。</p>
 <p>计算：</p>
 <ol>
@@ -328,8 +329,9 @@
 </li>
 </ol>
 <h4 id="T22"><a href="#T22" class="headerlink" title="T22"></a>T22</h4><p>如下图所示，共有 13 个格子。对任何一个格子进行一次操作，会使得它自己以及与它上下左右相邻的格子中的数字改变（由 1 变 0，或由 0 变 1）。现在要使得所有的格子中的数字都变为 0，至少需要（<strong>3</strong>）次操作。</p>
-<p><img title="" src="http://luogu-ipic.oss-cn-shanghai.aliyuncs.com/youti/35.png" alt="" width="777"></p>
-<p><a target="_blank" rel="noopener" href="https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1711694534590207259&amp;fr=search">解析</a></p>
+<img title="" src="http://luogu-ipic.oss-cn-shanghai.aliyuncs.com/youti/35.png" alt="" width="777">
+
+<p><a target="_blank" rel="noopener" href="https://easylearn.baidu.com/edu-page/tiangong/questiondetail?id=1711694534590207259&fr=search">解析</a></p>
 <h3 id="CSP-J-2019"><a href="#CSP-J-2019" class="headerlink" title="CSP-J 2019"></a><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1030">CSP-J 2019</a></h3><h4 id="T7"><a href="#T7" class="headerlink" title="T7"></a>T7</h4><p>把 8 个同样的球放在 5 个同样的袋子里，允许有的袋子空着不放，问共有多少种不同的分法？（<strong>18</strong>）</p>
 <p>提示：如果 8 个球都放在一个袋子里，无论是哪个袋子，都只算同一种分法。</p>
 <p>解：整数拆分问题,8 拆成至多 5 个数之和(不计顺序),可按袋子个数分类讨论:</p>
@@ -344,9 +346,9 @@
 <h4 id="T13"><a href="#T13" class="headerlink" title="T13"></a>T13</h4><p>—些数字可以颠倒过来看，例如 $0,1,8$ 颠倒过来还是本身，$6$ 颠倒过来是 $9$ , $9$ 颠倒过来看还是 $6$，其他数字颠倒过来都不构成数字。</p>
 <p>类似的，一些多位数也可以颠倒过来看，比如 $106$ 颠倒过来是 $901$。假设某个城市的车牌只由 $5$ 位数字组成，每一位都可以取$0$ 到 $9$。</p>
 <p>请问这个城市最多有多少个车牌倒过来恰好还是原来的车牌？（$75$）</p>
-<p>解析：容易发现，车牌的最中间一位只能是 $0,1,8$ 中的一个，因为只有他们倒过来是自己本身。这个车牌同时必须是回文的，即 $1,2$ 位必须和 $4,5$ 位相同，第 $1,2$ 位每位均有 $5$ 种选法，第 $4,5$ 位对应的只有一种，又根据<strong>乘法原理</strong>，$5\times 5\times 3\times 1\times 1=75$。</p>
+<p>解析：容易发现，车牌的最中间一位只能是 $0,1,8$ 中的一个，因为只有他们倒过来是自己本身。这个车牌同时必须是回文的，即 $1,2$ 位必须和 $4,5$ 位相同，第 $1,2$ 位每位均有 $5$ 种选法，第 $4,5$ 位对应的只有一种，又根据<strong>乘法原理</strong>，$5\times 5\times 3\times 1\times 1&#x3D;75$。</p>
 <h3 id="NOIP-2016"><a href="#NOIP-2016" class="headerlink" title="NOIP 2016"></a><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1019">NOIP 2016</a></h3><h4 id="T6"><a href="#T6" class="headerlink" title="T6"></a>T6</h4><p>如果开始时计算机处于小写输入状态，现在有一只小老鼠反复按照 CapsLock、字母键 A、字母键 S 和字母键 D 的顺序循环按键，即 CapsLock、A、S、D、CapsLock、A、S、D、……，屏幕上输出的第 $81$个字符是字母 $D$。</p>
-<p>解：由题意得，$6$ 个字母 $A,S,D,a,s,d$ 为一个周期，第 $81$ 个字符即 $81\bmod 6=3$ 即 $D$</p>
+<p>解：由题意得，$6$ 个字母 $A,S,D,a,s,d$ 为一个周期，第 $81$ 个字符即 $81\bmod 6&#x3D;3$ 即 $D$</p>
 <h4 id="T18"><a href="#T18" class="headerlink" title="T18"></a>T18</h4><p>Lucia 和她的朋友以及朋友的朋友都在某社交网站上注册了账号。下图是他们之间的关系图，两个人之间有边相连代表这两个人是朋友，没有边相连代表不是朋友。</p>
 <p>这个社交网站的规则是：</p>
 <ol>
@@ -354,7 +356,7 @@
 <li>如果 B 评论了该照片，那么他（她）的所有朋友都<strong>可以看见这个评论以及被评论的照片，但是不能对该照片进行评论</strong>（除非 A 也向他（她）分享了该照片）。</li>
 </ol>
 <p>现在 Lucia 已经上传了一张照片，但是她不想让 Jacob 看见这张照片，那么她可以向以下朋友 （<strong>A</strong> ）分享该照片。</p>
-<p><img src="http://luogu-ipic.oss-cn-shanghai.aliyuncs.com/8p80q.jpg" alt=""></p>
+<p><img src="http://luogu-ipic.oss-cn-shanghai.aliyuncs.com/8p80q.jpg"></p>
 <p>A. Dana, Michael, Eve</p>
 <p>B. Dana, Eve, Monica</p>
 <p>C. Michael, Eve, Jacob</p>
@@ -369,7 +371,6 @@
 </ol>
 <p>那么做一道菜需要 30 分钟。<br>注意：<strong>两道不同的菜的相同步骤不可以同时进行。</strong><br>例如第一道菜和第二道的菜不能同时洗，也不能同时切。那么做完三道菜的最短时间需要（<strong>50</strong>）分钟</p>
 <p>解：如下表</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -380,8 +381,7 @@
 <th>50</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>洗1</td>
 <td>洗2</td>
 <td>洗3</td>
@@ -402,13 +402,11 @@
 <td>炒2</td>
 <td>炒3</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p><del>表格是什么大可爱啊啊啊</del></p>
 <h3 id="SCP-2021"><a href="#SCP-2021" class="headerlink" title="SCP 2021"></a><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1038">SCP 2021</a></h3><h4 id="T2"><a href="#T2" class="headerlink" title="T2"></a>T2</h4><p>现有一段 24 分钟的视频文件，它的帧率是 30 Hz，分辨率是 1920×1080，每帧图像都是 32 位真彩色图像，使用的视频编码算法达到了<strong>25% 的压缩率</strong>。则这个视频文件占用的存储空间大小约是 （<strong>C</strong>）</p>
 <p>A. 668GiB<br>B. 334GiB<br>C. 85GiB<br>D. 500GiB</p>
-<p>解：$\frac{24\times 60\text{s}\times 30\text{Hz}\times 1980\times 1080\times32\text{Bit}}{8\times 1024\times 1024\times 1024}{}\times 25\% = 85GiB$</p>
+<p>解：$\frac{24\times 60\text{s}\times 30\text{Hz}\times 1980\times 1080\times32\text{Bit}}{8\times 1024\times 1024\times 1024}{}\times 25% &#x3D; 85GiB$</p>
 <h4 id="T3"><a href="#T3" class="headerlink" title="T3"></a>T3</h4><p>链接器的功能是（<strong>B</strong>）</p>
 <p>A. 把源代码转换成特定硬件平台的机器指令</p>
 <p>B. 把机器指令组合成完整的可执行程序</p>
@@ -420,7 +418,7 @@
 <p>B. $\Theta((n+m)\log n)$</p>
 <p>C. $\Theta(m + n\log n)$</p>
 <p>D. $\Theta(m\sqrt n + n\log n)$</p>
-<p>解：<br>while 循环 $n$ 次，每次取堆顶花费 $\Theta(1)$ 弹出堆顶花费 $\Theta(\log n)$，for 共循环 $m$ 次，每次更新堆顶花费 $\Theta(1)$ ；共 $n\times \Theta(1)+\Theta(\log n)+m\times \Theta(1)=\Theta(m + n\log n)$次。</p>
+<p>解：<br>while 循环 $n$ 次，每次取堆顶花费 $\Theta(1)$ 弹出堆顶花费 $\Theta(\log n)$，for 共循环 $m$ 次，每次更新堆顶花费 $\Theta(1)$ ；共 $n\times \Theta(1)+\Theta(\log n)+m\times \Theta(1)&#x3D;\Theta(m + n\log n)$次。</p>
 <h4 id="T5"><a href="#T5" class="headerlink" title="T5"></a>T5</h4><p>具有 $n$ 个顶点，$m$ 条边的连通图采用<strong>邻接矩阵</strong>存储结构，进行深度优先遍历运算的时间复杂度为 （B）</p>
 <p>A. $\Theta (n^3)$</p>
 <p>B. $\Theta (n^2)$</p>
@@ -433,37 +431,40 @@
 <p>C.快速排序算法</p>
 <p><strong>D.求二叉树的层次遍历</strong></p>
 <h4 id="T13-1"><a href="#T13-1" class="headerlink" title="T13"></a>T13</h4><p>有 $4$ 个结点和 $4$ 条边的有标号简单无向图的数量是（$15$）</p>
-<p>解：有 $C_4^2​=6$ 条可能的边，选其中 $4$ 条，即 $C_6^4​=15$ 种。</p>
+<p>解：有 $C_4^2​&#x3D;6$ 条可能的边，选其中 $4$ 条，即 $C_6^4​&#x3D;15$ 种。</p>
 <h4 id="T21"><a href="#T21" class="headerlink" title="T21"></a>T21</h4><p>从一个 $4\times4$ 的棋盘（不可旋转）中选取不在同一行也不在同一列上的两个方格，共有（$72 $）种方法。</p>
-<p>每一个格子可以选 $9$ 个格子，会重复计算一遍，故答案为 $4\times4\times9 \div 2=72$（种）</p>
+<p>每一个格子可以选 $9$ 个格子，会重复计算一遍，故答案为 $4\times4\times9 \div 2&#x3D;72$（种）</p>
 <h3 id="YBT-9"><a href="#YBT-9" class="headerlink" title="YBT - 9"></a>YBT - 9</h3><h4 id="单项选择"><a href="#单项选择" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T6-2"><a href="#T6-2" class="headerlink" title="T6"></a>T6</h5><p>冒泡排序在（<strong>元素无序</strong>）时比较次数最多，快速排序在（<strong>元素（基本）有序</strong>）时会退化。</p>
 <h5 id="T7-1"><a href="#T7-1" class="headerlink" title="T7"></a>T7</h5><p>$10 \leq n \leq 99$，$n$ 两位上的数字之和为 $a$，令 $n$ 分别乘 $3,5,7,9$，所得四个乘积的各位数之和分别仍然是 $a$，求 $n$ 的个数（<strong>5</strong>）</p>
 <p>$\because 3n\text{的各位之和仍为}a$</p>
 <p>$\therefore a,n\text{为3的倍数}$</p>
 <p>$\because 9n\text{的各位之和仍为}a$</p>
 <p>$\therefore a,n\text{为9的倍数}$</p>
-<p>$\therefore a = 9 \text{或}18$</p>
-<p>$\therefore n = 18,27,36,45,54,63,72,81,90,99$</p>
+<p>$\therefore a &#x3D; 9 \text{或}18$</p>
+<p>$\therefore n &#x3D; 18,27,36,45,54,63,72,81,90,99$</p>
 <p>经验证得，$27,54,63,72,81$ 不能满足所有条件。</p>
 <p>故答案为 $5$。</p>
 <h5 id="T7-2"><a href="#T7-2" class="headerlink" title="T7"></a>T7</h5><p>$15$ 张卡片，每张卡片上有三个不同的汉字，没有两张卡片上的汉字完全相同，任意六张中，一定有两张卡片上含有相同的汉字，求最多有（<strong>35</strong>）个不同的汉字。</p>
 <p>第一至第六张，设第一和第二张有汉字重复；</p>
 <p>第二至第七张，设第二和第三张有汉字重复；</p>
 <p>第十至第十五张，设第十张和第十一张有汉字重复；</p>
-<p>总共重复了十个汉字，故有 $45 - 10 = 35$个不重复的汉字。</p>
+<p>总共重复了十个汉字，故有 $45 - 10 &#x3D; 35$个不重复的汉字。</p>
 <h4 id="阅读理解"><a href="#阅读理解" class="headerlink" title="阅读理解"></a>阅读理解</h4><h5 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">2e5</span>;</span><br><span class="line"><span class="type">int</span> a[N];</span><br></pre></td></tr></table></figure>
+
 <p>将<code>2e5</code>修改为<code>2e10</code>，可以正常运行（<strong>F</strong>）</p>
 <p>会爆数组空间，256MB下<code>int</code>类型数组总和不可超过<code>3e7</code>。</p>
 <h5 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//链式前向星存图</span></span><br><span class="line"><span class="type">int</span> h[N];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">spfa</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = h[t];____;i = next[i])</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(h, <span class="number">-1</span>, <span class="built_in">sizeof</span>(h));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>______处应填（<strong>C</strong>）</p>
 <p>A.<code>i = 0</code></p>
 <p>B.<code>i &gt; 0</code></p>
 <p>C.<code>i != -1</code></p>
 <p>D.<code>i &gt; -1</code></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[N];</span><br><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="type">int</span> x = _____; <span class="comment">//x 表示数组 a 的最大值</span></span><br></pre></td></tr></table></figure>
+
 <p>_____ -&gt; <code>a[n - 1]</code></p>
-<h3 id="YBT-10"><a href="#YBT-10" class="headerlink" title="YBT - 10"></a>YBT - 10</h3><h4 id="单项选择-1"><a href="#单项选择-1" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h5><p>甲：6 鼠标或 2 键盘 / h</p>
-<p>乙：4 鼠标或 4 键盘 / h</p>
+<h3 id="YBT-10"><a href="#YBT-10" class="headerlink" title="YBT - 10"></a>YBT - 10</h3><h4 id="单项选择-1"><a href="#单项选择-1" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h5><p>甲：6 鼠标或 2 键盘 &#x2F; h</p>
+<p>乙：4 鼠标或 4 键盘 &#x2F; h</p>
 <p>求 6 h 最多生产多少套键鼠套装？（不必一小时只生产键盘或鼠标）（<strong>27</strong>）</p>
 <p>解：</p>
 <p>模拟几次后易看出，键鼠套装的套数取决于键盘的个数，使用贪心思想，令乙生产 6 小时键盘，得到 24 个键盘，甲生产 <strong>4.5 小时鼠标，1.5 小时键盘</strong>，得到 27 个鼠标，3 个键盘，共 27 套键鼠套装。</p>
@@ -482,7 +483,7 @@
 <h5 id="T6-3"><a href="#T6-3" class="headerlink" title="T6"></a>T6</h5><p>用同等规模的双核和单核 CPU 编写程序，运行时间（<strong>无明显差异</strong>）</p>
 <p>双核和单核的区别在于多任务处理</p>
 <h4 id="阅读理解-1"><a href="#阅读理解-1" class="headerlink" title="阅读理解"></a>阅读理解</h4><h5 id="1-1"><a href="#1-1" class="headerlink" title="1."></a>1.</h5><p>（统计逆序对）归并排序中，<code>msort(1, n);</code> 改为 <code>msort(1, n + 1);</code>，逆序对会增加，<code>a[1]</code> 到 <code>a[n]</code>也会改变。</p>
-<h3 id="YBT-13"><a href="#YBT-13" class="headerlink" title="YBT - 13"></a>YBT - 13</h3><h4 id="单项选择-3"><a href="#单项选择-3" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T3-1"><a href="#T3-1" class="headerlink" title="T3"></a>T3</h5><p>输入 <a target="_blank" rel="noopener" href="http://www.cisco.com">www.cisco.com</a> 不可访问，但输入 IP 地址仍可访问，故障归咎于（<strong>DNS</strong>）</p>
+<h3 id="YBT-13"><a href="#YBT-13" class="headerlink" title="YBT - 13"></a>YBT - 13</h3><h4 id="单项选择-3"><a href="#单项选择-3" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T3-1"><a href="#T3-1" class="headerlink" title="T3"></a>T3</h5><p>输入 <a target="_blank" rel="noopener" href="http://www.cisco.com/">www.cisco.com</a> 不可访问，但输入 IP 地址仍可访问，故障归咎于（<strong>DNS</strong>）</p>
 <p>未能解析域名，DNS 的锅</p>
 <h5 id="T6-4"><a href="#T6-4" class="headerlink" title="T6"></a>T6</h5><p>分治法求解需满足的条件</p>
 <ol>
@@ -496,19 +497,13 @@
 </li>
 </ol>
 <h5 id="T8"><a href="#T8" class="headerlink" title="T8"></a>T8</h5><p>堆的形状是一棵（<strong>完全二叉树</strong>）</p>
-<h5 id="T12"><a href="#T12" class="headerlink" title="T12"></a>T12</h5><script type="math/tex; mode=display">
-\begin{cases}
-x\bmod 4 = 3\\\\
-x\bmod 6=5\\\\
-x\bmod 15 = 14\\\\
-150\leq x\leq 200
-\end{cases}</script><p>不难看出，$x = k\times\text{lcm}(4,6,15)-1,(k\in N^*)$</p>
-<p>易得 $x=60\times 3-1=179$</p>
+<h5 id="T12"><a href="#T12" class="headerlink" title="T12"></a>T12</h5><p>$$<br>\begin{cases}<br>x\bmod 4 &#x3D; 3\\<br>x\bmod 6&#x3D;5\\<br>x\bmod 15 &#x3D; 14\\<br>150\leq x\leq 200<br>\end{cases}<br>$$</p>
+<p>不难看出，$x &#x3D; k\times\text{lcm}(4,6,15)-1,(k\in N^*)$</p>
+<p>易得 $x&#x3D;60\times 3-1&#x3D;179$</p>
 <h3 id="YBT-14"><a href="#YBT-14" class="headerlink" title="YBT - 14"></a>YBT - 14</h3><h4 id="单项选择-4"><a href="#单项选择-4" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T2-1"><a href="#T2-1" class="headerlink" title="T2"></a>T2</h5><p>存取速度：寄存器 &gt; 高速缓存 &gt; 内存 &gt; 外存。</p>
 <h5 id="T9-1"><a href="#T9-1" class="headerlink" title="T9"></a>T9</h5><p>五个人，每人制造 100 架纸飞机，一包纸有四张，一张纸可制造 7 架纸飞机，不能借纸，不能提前裁纸，老板可拆开一包纸，分给员工。问至少要买几包纸。</p>
-<p>每个员工需要 $\lceil\frac{100}{7}\rceil = 15$ 张纸，共 $15 \times 5 = 75$ 张。要买 $\lfloor \frac{75}{4} \rfloor = 19$ 包。</p>
+<p>每个员工需要 $\lceil\frac{100}{7}\rceil &#x3D; 15$ 张纸，共 $15 \times 5 &#x3D; 75$ 张。要买 $\lfloor \frac{75}{4} \rfloor &#x3D; 19$ 包。</p>
 <h5 id="T10"><a href="#T10" class="headerlink" title="T10"></a>T10</h5><p>田忌赛马：赢+10，输 -10，平 +0；</p>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -525,8 +520,7 @@ x\bmod 15 = 14\\\\
 <th>10</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>田忌</td>
 <td>100</td>
 <td>95</td>
@@ -552,12 +546,10 @@ x\bmod 15 = 14\\\\
 <td>44</td>
 <td>40</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <p>田忌第四匹对齐王第六匹，$+10$。</p>
 <p>田忌第五匹对齐王第五匹，$-10$。</p>
-<p>田忌第 $i$ 匹对齐王第 $i + 1$ 匹，$+10 \times 7 - 10 = 60$</p>
+<p>田忌第 $i$ 匹对齐王第 $i + 1$ 匹，$+10 \times 7 - 10 &#x3D; 60$</p>
 <p>故最多赢 $60$ 。</p>
 <h5 id="T12-1"><a href="#T12-1" class="headerlink" title="T12"></a>T12</h5><p>汉诺塔，A 只能到 B，B 只能到 C，C 只能到 A。</p>
 <p>A 柱上有三个盘子，移动到 C 柱上的次数：$21$</p>
@@ -565,26 +557,29 @@ x\bmod 15 = 14\\\\
 <p>（$44$）</p>
 <p>错位排列（容斥）</p>
 <p>记 $n$ 封信的错位重排数为 $D_n$。</p>
-<p>则 $D_1=0,D_2=1,D_n=(n-1)(D_{n-2}+D_{n-1})$</p>
-<p>$D_n$的前几项：$D_1=0,D_2=1,D_3=2,D_4=9,D_5=44$</p>
+<p>则 $D_1&#x3D;0,D_2&#x3D;1,D_n&#x3D;(n-1)(D_{n-2}+D_{n-1})$</p>
+<p>$D_n$的前几项：$D_1&#x3D;0,D_2&#x3D;1,D_3&#x3D;2,D_4&#x3D;9,D_5&#x3D;44$</p>
 <h5 id="T14"><a href="#T14" class="headerlink" title="T14"></a>T14</h5><p>字符串 “zhangnahz” 本质不同的子串个数（$42$）</p>
 <p>空串：$1$ 个；</p>
 <p>长度为 $1$：$5$ 个</p>
-<p>长度为 $2$ 到 $9$ ：$8+7+6+5+4+3+2+1=36$ 个</p>
-<p>共 $1+5+36 = 42$ 个。</p>
+<p>长度为 $2$ 到 $9$ ：$8+7+6+5+4+3+2+1&#x3D;36$ 个</p>
+<p>共 $1+5+36 &#x3D; 42$ 个。</p>
 <h4 id="阅读理解-2"><a href="#阅读理解-2" class="headerlink" title="阅读理解"></a>阅读理解</h4><h5 id="1-2"><a href="#1-2" class="headerlink" title="1."></a>1.</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a,b; </span><br><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line"><span class="type">int</span> ans = <span class="number">1</span>; </span><br><span class="line"><span class="keyword">while</span>(b)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(b &amp; <span class="number">1</span>) ans *= a;</span><br><span class="line">    a *= a;</span><br><span class="line">    b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; ans;</span><br></pre></td></tr></table></figure>
-<p>输入 $a = 10,b=10$，能得到正确答案（$F$）。</p>
+
+<p>输入 $a &#x3D; 10,b&#x3D;10$，能得到正确答案（$F$）。</p>
 <blockquote>
-<p>$10_{(10)}=1010{(2)}$<br>$ans = 10^2 \times 10^8 = 10^{12}$</p>
+<p>$10_{(10)}&#x3D;1010{(2)}$<br>$ans &#x3D; 10^2 \times 10^8 &#x3D; 10^{12}$</p>
 <p>爆 int 了。</p>
 </blockquote>
 <h5 id="2-1"><a href="#2-1" class="headerlink" title="2."></a>2.</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="type">int</span> a[],<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n - <span class="number">1</span>; ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> index = i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; k &lt;= n;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[j] &lt; a[index]) index = j;</span><br><span class="line">            <span class="keyword">if</span> (index != i)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">swap</span>(a[index],a[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>若将 <code>if (index != i)</code>改为<code>if (1)</code>，不会影响程序运行结果（$T$）</p>
 <blockquote>
 <p>当 <code>index == k</code>时，交换无影响。</p>
 </blockquote>
 <p>将<code>while (i &lt;= mid) b[k++] = a[i++];</code>与 <code>while (j &lt;= r) b[k++] = a[j++];</code>交换，程序运行结果不变（$T$）。</p>
 <h5 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge_sort</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (l == r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="type">int</span> mid = (l + r) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">merge_sort</span>(l, mid); <span class="built_in">mergesort</span>(mid + <span class="number">1</span>,r);</span><br><span class="line">    <span class="type">int</span> i = l, j = mid + <span class="number">1</span>, k = l; </span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i] &lt; a[j])</span><br><span class="line">        &#123;</span><br><span class="line">            ans += j - k;</span><br><span class="line">            b[k++] = a[j++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            b[k++] = a[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid) b[k++] = a[i++];</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= r) b[k++] = a[j++];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = l; i &lt;= r; ++i) a[i] = b[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/1639015">归并排序——百度百科</a></p>
 <p>归并操作[$O(n\log n)$]的工作原理如下：</p>
 <ol>
@@ -600,14 +595,10 @@ x\bmod 15 = 14\\\\
 </li>
 </ol>
 <h3 id="YBT-15"><a href="#YBT-15" class="headerlink" title="YBT - 15"></a>YBT - 15</h3><h4 id="单项选择-5"><a href="#单项选择-5" class="headerlink" title="单项选择"></a>单项选择</h4><h5 id="T3-2"><a href="#T3-2" class="headerlink" title="T3"></a>T3</h5><p>$200\text{Mbps}$ 的宽带下载大小为 $2\text{GByte}$ 的文件极限最快大约需要（$81.92$）秒</p>
-<script type="math/tex; mode=display">
-\dfrac{2\times 1024\times 1024\times 1024\times 8}{200\times 1024\times 1024} = \frac{2^{34}}{2^{21}\times 100}</script><h5 id="T4-2"><a href="#T4-2" class="headerlink" title="T4"></a>T4</h5><p>IP地址 $10.20.220.222$，子网掩码 $255.255.192.0$，网络号为（$10.20.192.0$）</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-&\,\,\,10.\,\,\,20.220.222&\\\\
-\&\,&255.255.192.\,\,\,\,\,\,0&\\\\
-&\,\,\,10.\,\,\,20.192.\,\,\,\,\,\,0
-\end{aligned}</script><p>和 $255$ 相与 得原数，和 $192$ 相与得 $192$。</p>
+<p>$$<br>\dfrac{2\times 1024\times 1024\times 1024\times 8}{200\times 1024\times 1024} &#x3D; \frac{2^{34}}{2^{21}\times 100}<br>$$</p>
+<h5 id="T4-2"><a href="#T4-2" class="headerlink" title="T4"></a>T4</h5><p>IP地址 $10.20.220.222$，子网掩码 $255.255.192.0$，网络号为（$10.20.192.0$）</p>
+<p>$$<br>\begin{aligned}<br>&amp;,,,10.,,,20.220.222&amp;\\<br>&amp;,&amp;255.255.192.,,,,,,0&amp;\\<br>&amp;,,,10.,,,20.192.,,,,,,0<br>\end{aligned}<br>$$</p>
+<p>和 $255$ 相与 得原数，和 $192$ 相与得 $192$。</p>
 <h5 id="T7-3"><a href="#T7-3" class="headerlink" title="T7"></a>T7</h5><p>下列 （A）不是 STL 序列式容器</p>
 <p>A. set</p>
 <p>B. list</p>
@@ -635,72 +626,47 @@ x\bmod 15 = 14\\\\
 <p>综上，这种问题，我们先考虑将最慢的两人送去，分为两种情况</p>
 <p>1.让最快的两个人过去，其中一人回来，再让最慢的两个过去，先去的两人中另一人再回来。</p>
 <p>2.让最快的和最慢的过去，最快的回来，再让最快的和第二慢的过去，最快的再回来</p>
-<p>以上情况为 $\geq 4$ 人的情况，当人数 $&lt;4$ 时，直接分情况讨论即可。</p>
-<h5 id="平方和公式"><a href="#平方和公式" class="headerlink" title="平方和公式"></a>平方和公式</h5><script type="math/tex; mode=display">
-\sum_{i = 1}^ni^2 = \frac{n(n + 1)(2n+1)}{6}</script><p>证明:</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\because \sum_{i=1}^n((i+1)^3-i^3)=&2^3-1^3+3^3-2^3+\cdots +(n+1)^3-n^3\\\\
-=&(n+1)^3-1\\\\
-\end{aligned}</script><script type="math/tex; mode=display">
-\because (n+1)^3=n^3+3n^2+3n+1</script><script type="math/tex; mode=display">
-\therefore(n+1)^3-n^3=3n^2+3n+1</script><script type="math/tex; mode=display">
-\begin{aligned}
-\therefore (n+1)^3-1&=\sum_{i=1}^n 3i^2+3i+1\\\\
-(n+1)^3-1&=3\sum_{i=1}^n i^2+3\sum_{i=1}^ni+\sum_{i=1}^n1\\\\
-n^3+3n^2+3n&=3\sum_{i=1}^ni^2+3\times\frac{(1+n)n}{2}+n\\\\
-3\sum_{i=1}^ni^2&=n^3+3n^2+3n-3\times\frac{(1+n)n}{2}-n\\\\
-\sum_{i=1}^ni^2&=\frac{n^3}3+n^2+\frac3 2n-\frac{(1+n)n}{2}\\\\
-&=\frac{2n^3+6n^2+9n-3n^2-3n}{6}\\\\
-&=\frac{2n^3+3n^2+6n}{6}\\\\
-&=\frac{n(2n^2+3n+6)}{6}\\\\
-&=\frac{n(n+1)(2n+1)}{6}\\\\
-\end{aligned}</script><h5 id="T14-1"><a href="#T14-1" class="headerlink" title="T14"></a>T14</h5><p>$x\bmod3=2,x\bmod 5 = 3, x\bmod 7 = 2$</p>
+<p>以上情况为 $\geq 4$ 人的情况，当人数 $&lt;4$ 时，直接分情况讨论即可。</p>
+<h5 id="平方和公式"><a href="#平方和公式" class="headerlink" title="平方和公式"></a>平方和公式</h5><p>$$<br>\sum_{i &#x3D; 1}^ni^2 &#x3D; \frac{n(n + 1)(2n+1)}{6}<br>$$</p>
+<p>证明:</p>
+<p>$$<br>\begin{aligned}<br>\because \sum_{i&#x3D;1}^n((i+1)^3-i^3)&#x3D;&amp;2^3-1^3+3^3-2^3+\cdots +(n+1)^3-n^3\\<br>&#x3D;&amp;(n+1)^3-1\\<br>\end{aligned}<br>$$</p>
+<p>$$<br>\because (n+1)^3&#x3D;n^3+3n^2+3n+1<br>$$</p>
+<p>$$<br>\therefore(n+1)^3-n^3&#x3D;3n^2+3n+1<br>$$</p>
+<p>$$<br>\begin{aligned}<br>\therefore (n+1)^3-1&amp;&#x3D;\sum_{i&#x3D;1}^n 3i^2+3i+1\\<br>(n+1)^3-1&amp;&#x3D;3\sum_{i&#x3D;1}^n i^2+3\sum_{i&#x3D;1}^ni+\sum_{i&#x3D;1}^n1\\<br>n^3+3n^2+3n&amp;&#x3D;3\sum_{i&#x3D;1}^ni^2+3\times\frac{(1+n)n}{2}+n\\<br>3\sum_{i&#x3D;1}^ni^2&amp;&#x3D;n^3+3n^2+3n-3\times\frac{(1+n)n}{2}-n\\<br>\sum_{i&#x3D;1}^ni^2&amp;&#x3D;\frac{n^3}3+n^2+\frac3 2n-\frac{(1+n)n}{2}\\<br>&amp;&#x3D;\frac{2n^3+6n^2+9n-3n^2-3n}{6}\\<br>&amp;&#x3D;\frac{2n^3+3n^2+6n}{6}\\<br>&amp;&#x3D;\frac{n(2n^2+3n+6)}{6}\\<br>&amp;&#x3D;\frac{n(n+1)(2n+1)}{6}\\<br>\end{aligned}<br>$$</p>
+<h5 id="T14-1"><a href="#T14-1" class="headerlink" title="T14"></a>T14</h5><p>$x\bmod3&#x3D;2,x\bmod 5 &#x3D; 3, x\bmod 7 &#x3D; 2$</p>
 <p>求第五个 $x$</p>
 <p>（$443$）</p>
 <p>CRT</p>
 <p>用于求解如下形式的方程组</p>
-<script type="math/tex; mode=display">
-\begin{cases}
-x&\equiv &a_1(\bmod\ n_1)\\\\
-x&\equiv &a_2(\bmod\ n_2)\\\
-&\vdots\\\\
-x&\equiv &a_k(\bmod\ n_k)\\\\
-\end{cases}</script><ol>
+<p>$$<br>\begin{cases}<br>x&amp;\equiv &amp;a_1(\bmod\ n_1)\\<br>x&amp;\equiv &amp;a_2(\bmod\ n_2)\<br>&amp;\vdots\\<br>x&amp;\equiv &amp;a_k(\bmod\ n_k)\\<br>\end{cases}<br>$$</p>
+<ol>
 <li><p>计算所有模数的积 $n$</p>
 </li>
 <li><p>对于第 $i$ 个方程：</p>
 <ul>
-<li><p>计算 $m_i=n/n_i$</p>
+<li><p>计算 $m_i&#x3D;n&#x2F;n_i$</p>
 </li>
 <li><p>计算 $m_i$ 在模 $n_i$ 意义下的逆元 $m_i^{-1}$</p>
 </li>
-<li><p>计算 $c_i=m_im_i^{-1}$ （<strong>不对 $n_i$ 取模</strong>）</p>
+<li><p>计算 $c_i&#x3D;m_im_i^{-1}$ （<strong>不对 $n_i$ 取模</strong>）</p>
 </li>
 </ul>
 </li>
-<li><p>方程组在模 $n$ 意义下的唯一解为：$x = \sum_{i=1}^ka_ic_i(\bmod\,n)$</p>
+<li><p>方程组在模 $n$ 意义下的唯一解为：$x &#x3D; \sum_{i&#x3D;1}^ka_ic_i(\bmod,n)$</p>
 </li>
 </ol>
 <p>解：</p>
-<script type="math/tex; mode=display">
-\begin{cases}
-x\equiv 2(\bmod\ 3)\\\\
-x\equiv 3(\bmod\ 5)\\\\
-x\equiv 2(\bmod\ 7)\\\\
-\end{cases}</script><script type="math/tex; mode=display">
-\begin{cases}
-n=105\\\\
-m_1=35,m_2=21,m_3=15\\\\
-c_1=35\times2,c_2=21,c_3=15\\\\
-\end{cases}</script><script type="math/tex; mode=display">
-x\equiv2\times 70+3\times21+2\times15\equiv233\equiv23(\bmod\ 105)</script><p>第一个解为 $23$，第 $k$ 个解为 $23 + n\times(k-1)$</p>
-<p>$ans = 23+105\times 4=443$</p>
+<p>$$<br>\begin{cases}<br>x\equiv 2(\bmod\ 3)\\<br>x\equiv 3(\bmod\ 5)\\<br>x\equiv 2(\bmod\ 7)\\<br>\end{cases}<br>$$</p>
+<p>$$<br>\begin{cases}<br>n&#x3D;105\\<br>m_1&#x3D;35,m_2&#x3D;21,m_3&#x3D;15\\<br>c_1&#x3D;35\times2,c_2&#x3D;21,c_3&#x3D;15\\<br>\end{cases}<br>$$</p>
+<p>$$<br>x\equiv2\times 70+3\times21+2\times15\equiv233\equiv23(\bmod\ 105)<br>$$</p>
+<p>第一个解为 $23$，第 $k$ 个解为 $23 + n\times(k-1)$</p>
+<p>$ans &#x3D; 23+105\times 4&#x3D;443$</p>
 <h4 id="阅读程序"><a href="#阅读程序" class="headerlink" title="阅读程序"></a>阅读程序</h4><h5 id="1-3"><a href="#1-3" class="headerlink" title="1."></a>1.</h5><p>将<code>scanf(&quot;%d\n&quot;, &amp;a);</code>中的 <code>\n</code>去掉，下一行的<code>gets(s);</code>读取结果不变。（$F$）</p>
 <p>scanf 会把空格和换行<strong>丢弃在读入序列中</strong>，因此，去掉<code>\n</code>后<code>gets(s);</code>将读取<code>\n</code>。</p>
 <h5 id="2-2"><a href="#2-2" class="headerlink" title="2."></a>2.</h5><p>C++ 语言中，struct 默认是 public 的，而 class 默认是 private 的。（$T$）</p>
 <h5 id="3-1"><a href="#3-1" class="headerlink" title="3."></a>3.</h5><p>memset 函数是以（$1$）个字节为一组进行设置的。</p>
 <h5 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">(<span class="type">int</span> *a, <span class="type">int</span> （<span class="number">1</span>）)</span></span>;</span><br></pre></td></tr></table></figure>
+
 <p>已知（1）作为一个<code>int</code>类型参与函数，且（1）的值在函数中不被改变，则（1）中不能填（<strong>B</strong>）</p>
 <p>A. cnt</p>
 <p>B. *cnt</p>
@@ -723,12 +689,12 @@ x\equiv2\times 70+3\times21+2\times15\equiv233\equiv23(\bmod\ 105)</script><p>�
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/%E4%B8%BB%E5%AE%9A%E7%90%86.html" rel="prev" title="主定理">
+                <a href="/Master-theorem.html" rel="prev" title="主定理">
                   <i class="fa fa-chevron-left"></i> 主定理
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F%20by_%E6%9D%8E%E5%8D%9A%E6%9D%B0.html" rel="next" title="程序人生">
+                <a href="/program-life.html" rel="next" title="程序人生">
                   程序人生 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -789,7 +755,7 @@ x\equiv2\times 70+3\times21+2\times15\equiv233\equiv23(\bmod\ 105)</script><p>�
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Hszzzx","repo":"hszzzx.github.io","client_id":"8603d2c02ce404804f22","client_secret":"490b341eb256461bcea9c3b887663246b7dd402a","admin_user":"Hszzzx","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"6cdd990ea9e0a12232d0189f5c0181bb"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"Hszzzx","repo":"hszzzx.github.io","client_id":"8603d2c02ce404804f22","client_secret":"490b341eb256461bcea9c3b887663246b7dd402a","admin_user":"Hszzzx","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"199c320a5f5265208b9eab56d144768b"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
