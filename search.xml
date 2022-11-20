@@ -39,6 +39,28 @@
       </tags>
   </entry>
   <entry>
+    <title>优美语句</title>
+    <url>/Good-sentence.html</url>
+    <content><![CDATA[<p>那夜我推开了窗，招来了风和奇迹</p>
+<p>我们所度过的每个平凡的日常，也许就是连续发生的奇迹</p>
+<p>声起立华乐独奏，曲末音无心结弦。</p>
+<span id="more"></span>
+
+<p>重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
+<p>越是试着忘记，越是记得<br>深刻。</p>
+<p>我的终点，与幸福同在</p>
+<p>一旦你尝试过天空的味道，你就会永远向上仰望 ——列奥那多·达芬奇</p>
+<p>要是因为烦恼很痛苦，就选择了轻松的选项，将来一定会后悔。</p>
+<p>死亡不是终点，被遗忘才是。</p>
+<p>才能是可以栽培开花的，灵感是可以研磨雕琢的。</p>
+<p>千山万水，因你不过毫厘</p>
+<p>大部分人并不想长大，只是没办法继续当一个小孩子。</p>
+<p>就因为没有好事发生，所以至少要保持微笑。</p>
+<p>如果结果不如你所愿，就在尘埃落定前奋力一搏。</p>
+<p>无论乌云有多浓厚，星星也一定还在，只是暂时看不到了而已。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>8.21 T3 laundry</title>
     <url>/8.21-T3-laundry.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
@@ -201,6 +223,104 @@
 ]]></content>
       <tags>
         <tag>游记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主定理</title>
+    <url>/Master-theorem.html</url>
+    <content><![CDATA[<p>假设有递推关系式 $T(n) &#x3D; aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
+<span id="more"></span>
+
+<ol>
+<li><p>若 $f(n) &#x3D; O(n^{\log_b a-\varepsilon})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a})$。</p>
+</li>
+<li><p>若 $f(n) &#x3D; \Theta(n^{\log_b a})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a}\log n)$</p>
+</li>
+<li><p>若 $f(n) &#x3D; \Omega(n^{\log_b a+\varepsilon})$ ，$\varepsilon &gt; 0$ ，且对于某个常数 $c &lt; 1$ 和所有充分大的 $n$，有 $af(\frac n b) \leq cf(n)$ ，那么 $T(n) &#x3D; \Theta(f(n))$</p>
+</li>
+</ol>
+<h2 id="人话翻译"><a href="#人话翻译" class="headerlink" title="人话翻译"></a>人话翻译</h2><ol>
+<li><p>找出 $a, b$，计算 $\log _b a$。</p>
+</li>
+<li><p>找到 $f(n)$ ， 找出它的次数 $k$。</p>
+</li>
+<li><p>比较 $\log_b a$ 与 $k$ 。</p>
+<ul>
+<li><p>若 $\log_b a &gt; k$，则时间主要消耗在递归上，$T(n) &#x3D; \Theta(n^{log_b a})$。</p>
+</li>
+<li><p>若 $\log_b a &#x3D; k$，则时间在递归和递归外的计算上消耗相等，$T(n) &#x3D; \Theta(n^{log_b a}\log n)$。</p>
+</li>
+<li><p>若 $\log_b a &lt; k$，则时间主要消耗在递归之外的计算上，$T(n) &#x3D; \Theta(f(n))$。</p>
+</li>
+<li><p>当 $f(n) &#x3D; \Theta (n^{\log_b a}\log^kn)$，其中 $k \geq 1$ 且为一个常数，则有 $T(n) &#x3D; \Theta (n^{\log_b a}\log^{k+1}n)$</p>
+<p>（感谢 @<a href="https://www.luogu.com.cn/user/469356">Anna黛娜</a> 的补充）</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="实践一下"><a href="#实践一下" class="headerlink" title="实践一下"></a>实践一下</h2><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/t0qvhv6z.png"></p>
+<ol>
+<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(n\log n)$。</p>
+</li>
+<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 1.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n)$。</p>
+</li>
+<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 0.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(\log n)$。</p>
+</li>
+<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.5.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n\sqrt n)$。</p>
+</li>
+</ol>
+<h2 id="还有一点"><a href="#还有一点" class="headerlink" title="还有一点"></a>还有一点</h2><ol>
+<li><p>$T(n) &#x3D; 2^n T(\frac n 2) + n^n $</p>
+<blockquote>
+<p><strong>此处不满足主定理，$a$ 不是常数</strong></p>
+</blockquote>
+</li>
+<li><p>$T(n) &#x3D; 16T(\frac n 4) + n$</p>
+<blockquote>
+<p>$a &#x3D; 16, b &#x3D; 4, f(n) &#x3D; n, \log_b a &#x3D; 2, 2 &gt; 1$，适用于主定理第一种情况，$T(n) &#x3D; \Theta(n^2)$。</p>
+</blockquote>
+</li>
+<li><p><a href="https://ti.luogu.com.cn/problemset/1017">NOIP 2015 T19</a></p>
+<blockquote>
+<p>某算法的计算时间表示为递推关系式 $T(n) &#x3D; T(n - 1) + n$（$n \in N^*$ ）及 $T(0)&#x3D;1$，则该算法的时间复杂度为（${\color{green}D}$）。</p>
+</blockquote>
+<blockquote>
+<p>A. $O(\log n)$<br>B. $O(n\log n) $<br>C. $O(n)$<br>D. $O(n^2)$</p>
+<p>解析：<strong>此处不满足主定理</strong><br>$ \therefore n + (n - 1) + (n - 2) + … +1 &#x3D; \sum\limits_{i &#x3D; 1}^n i &#x3D; \frac{(1+n)n}2 $<br>取最高项次数，复杂度为 $O(n^2)$。</p>
+</blockquote>
+</li>
+<li><p><a href="https://ti.luogu.com.cn/problemset/1022">2017 NOIP提高组 T6</a></p>
+<blockquote>
+<p>若某算法的计算时间表示为递推关系式：</p>
+<ul>
+<li><p>$T(N) &#x3D; 2T(\dfrac{N}{2}) + N \log N$</p>
+</li>
+<li><p>$T(1) &#x3D; 1$</p>
+<p>则该算法的时间复杂度为（${\color{green}C}$）。</p>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>A.$O(N)$</p>
+<p>B.$O(N \log N)$</p>
+<p>C.$O(N \log^2 N)$</p>
+<p>D.$O(N^2)$</p>
+</blockquote>
+<blockquote>
+<p>解：</p>
+<p>$\log_ba &#x3D; 1$。当 $k &#x3D; 0$ 时，</p>
+<p>$\begin{aligned}<br> f(N) &amp;&#x3D; \Theta (N^{\log_b a}\log^kN)\\<br> &amp;&#x3D;\Theta(N\log N)<br> \end{aligned}$</p>
+<p>故</p>
+<p>$\begin{aligned}<br> T(n) &amp;&#x3D; \Theta (n^{\log_b a}\log^{k+1}n)\\<br> &amp;&#x3D; \Theta(N^{1}\log^{1 + 1} N)\&amp;&#x3D;\Theta(N\log^2 N)<br> \end{aligned}$</p>
+<p>（感谢 @<a href="https://www.luogu.com.cn/user/388651">5k_sync_closer</a> 的指正）</p>
+</blockquote>
+</li>
+</ol>
+<p>如有不足之处，恳请斧正。（我丢人显眼）</p>
+<p><del>轻喷</del></p>
+]]></content>
+      <tags>
+        <tag>学习资料</tag>
       </tags>
   </entry>
   <entry>
@@ -406,126 +526,6 @@
       </tags>
   </entry>
   <entry>
-    <title>优美语句</title>
-    <url>/Good-sentence.html</url>
-    <content><![CDATA[<p>那夜我推开了窗，招来了风和奇迹</p>
-<p>我们所度过的每个平凡的日常，也许就是连续发生的奇迹</p>
-<p>声起立华乐独奏，曲末音无心结弦。</p>
-<span id="more"></span>
-
-<p>重要的是无论我们选择哪条路，都要担负起选择的责任。</p>
-<p>越是试着忘记，越是记得<br>深刻。</p>
-<p>我的终点，与幸福同在</p>
-<p>一旦你尝试过天空的味道，你就会永远向上仰望 ——列奥那多·达芬奇</p>
-<p>要是因为烦恼很痛苦，就选择了轻松的选项，将来一定会后悔。</p>
-<p>死亡不是终点，被遗忘才是。</p>
-<p>才能是可以栽培开花的，灵感是可以研磨雕琢的。</p>
-<p>千山万水，因你不过毫厘</p>
-<p>大部分人并不想长大，只是没办法继续当一个小孩子。</p>
-<p>就因为没有好事发生，所以至少要保持微笑。</p>
-<p>如果结果不如你所愿，就在尘埃落定前奋力一搏。</p>
-<p>无论乌云有多浓厚，星星也一定还在，只是暂时看不到了而已。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>主定理</title>
-    <url>/Master-theorem.html</url>
-    <content><![CDATA[<p>假设有递推关系式 $T(n) &#x3D; aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
-<span id="more"></span>
-
-<ol>
-<li><p>若 $f(n) &#x3D; O(n^{\log_b a-\varepsilon})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a})$。</p>
-</li>
-<li><p>若 $f(n) &#x3D; \Theta(n^{\log_b a})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a}\log n)$</p>
-</li>
-<li><p>若 $f(n) &#x3D; \Omega(n^{\log_b a+\varepsilon})$ ，$\varepsilon &gt; 0$ ，且对于某个常数 $c &lt; 1$ 和所有充分大的 $n$，有 $af(\frac n b) \leq cf(n)$ ，那么 $T(n) &#x3D; \Theta(f(n))$</p>
-</li>
-</ol>
-<h2 id="人话翻译"><a href="#人话翻译" class="headerlink" title="人话翻译"></a>人话翻译</h2><ol>
-<li><p>找出 $a, b$，计算 $\log _b a$。</p>
-</li>
-<li><p>找到 $f(n)$ ， 找出它的次数 $k$。</p>
-</li>
-<li><p>比较 $\log_b a$ 与 $k$ 。</p>
-<ul>
-<li><p>若 $\log_b a &gt; k$，则时间主要消耗在递归上，$T(n) &#x3D; \Theta(n^{log_b a})$。</p>
-</li>
-<li><p>若 $\log_b a &#x3D; k$，则时间在递归和递归外的计算上消耗相等，$T(n) &#x3D; \Theta(n^{log_b a}\log n)$。</p>
-</li>
-<li><p>若 $\log_b a &lt; k$，则时间主要消耗在递归之外的计算上，$T(n) &#x3D; \Theta(f(n))$。</p>
-</li>
-<li><p>当 $f(n) &#x3D; \Theta (n^{\log_b a}\log^kn)$，其中 $k \geq 1$ 且为一个常数，则有 $T(n) &#x3D; \Theta (n^{\log_b a}\log^{k+1}n)$</p>
-<p>（感谢 @<a href="https://www.luogu.com.cn/user/469356">Anna黛娜</a> 的补充）</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="实践一下"><a href="#实践一下" class="headerlink" title="实践一下"></a>实践一下</h2><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/t0qvhv6z.png"></p>
-<ol>
-<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(n\log n)$。</p>
-</li>
-<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 1.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n)$。</p>
-</li>
-<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 0.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(\log n)$。</p>
-</li>
-<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.5.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n\sqrt n)$。</p>
-</li>
-</ol>
-<h2 id="还有一点"><a href="#还有一点" class="headerlink" title="还有一点"></a>还有一点</h2><ol>
-<li><p>$T(n) &#x3D; 2^n T(\frac n 2) + n^n $</p>
-<blockquote>
-<p><strong>此处不满足主定理，$a$ 不是常数</strong></p>
-</blockquote>
-</li>
-<li><p>$T(n) &#x3D; 16T(\frac n 4) + n$</p>
-<blockquote>
-<p>$a &#x3D; 16, b &#x3D; 4, f(n) &#x3D; n, \log_b a &#x3D; 2, 2 &gt; 1$，适用于主定理第一种情况，$T(n) &#x3D; \Theta(n^2)$。</p>
-</blockquote>
-</li>
-<li><p><a href="https://ti.luogu.com.cn/problemset/1017">NOIP 2015 T19</a></p>
-<blockquote>
-<p>某算法的计算时间表示为递推关系式 $T(n) &#x3D; T(n - 1) + n$（$n \in N^*$ ）及 $T(0)&#x3D;1$，则该算法的时间复杂度为（${\color{green}D}$）。</p>
-</blockquote>
-<blockquote>
-<p>A. $O(\log n)$<br>B. $O(n\log n) $<br>C. $O(n)$<br>D. $O(n^2)$</p>
-<p>解析：<strong>此处不满足主定理</strong><br>$ \therefore n + (n - 1) + (n - 2) + … +1 &#x3D; \sum\limits_{i &#x3D; 1}^n i &#x3D; \frac{(1+n)n}2 $<br>取最高项次数，复杂度为 $O(n^2)$。</p>
-</blockquote>
-</li>
-<li><p><a href="https://ti.luogu.com.cn/problemset/1022">2017 NOIP提高组 T6</a></p>
-<blockquote>
-<p>若某算法的计算时间表示为递推关系式：</p>
-<ul>
-<li><p>$T(N) &#x3D; 2T(\dfrac{N}{2}) + N \log N$</p>
-</li>
-<li><p>$T(1) &#x3D; 1$</p>
-<p>则该算法的时间复杂度为（${\color{green}C}$）。</p>
-</li>
-</ul>
-</blockquote>
-<blockquote>
-<p>A.$O(N)$</p>
-<p>B.$O(N \log N)$</p>
-<p>C.$O(N \log^2 N)$</p>
-<p>D.$O(N^2)$</p>
-</blockquote>
-<blockquote>
-<p>解：</p>
-<p>$\log_ba &#x3D; 1$。当 $k &#x3D; 0$ 时，</p>
-<p>$\begin{aligned}<br> f(N) &amp;&#x3D; \Theta (N^{\log_b a}\log^kN)\\<br> &amp;&#x3D;\Theta(N\log N)<br> \end{aligned}$</p>
-<p>故</p>
-<p>$\begin{aligned}<br> T(n) &amp;&#x3D; \Theta (n^{\log_b a}\log^{k+1}n)\\<br> &amp;&#x3D; \Theta(N^{1}\log^{1 + 1} N)\&amp;&#x3D;\Theta(N\log^2 N)<br> \end{aligned}$</p>
-<p>（感谢 @<a href="https://www.luogu.com.cn/user/388651">5k_sync_closer</a> 的指正）</p>
-</blockquote>
-</li>
-</ol>
-<p>如有不足之处，恳请斧正。（我丢人显眼）</p>
-<p><del>轻喷</del></p>
-]]></content>
-      <tags>
-        <tag>学习资料</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>好听的歌</title>
     <url>/Pigeon.html</url>
     <content><![CDATA[<p><a href="https://music.163.com/#/playlist?id=7530065736">网易云鸽单</a></p>
@@ -700,6 +700,24 @@
 ]]></content>
   </entry>
   <entry>
+    <title>数论分块</title>
+    <url>/number-theory.html</url>
+    <content><![CDATA[<p>声明：本文参考 <a href="https://oi-wiki.org/math/number-theory/sqrt-decomposition/">OI Wiki</a>，仅为自己的笔记。</p>
+<span id="more"></span>
+
+<p>数论分块可以快速计算一些<strong>除法中含有向下取整的和式</strong>，即形如 $\sum_{i&#x3D;1}^nf(i)g(\lfloor\frac{n}{i}\rfloor)$ 的式子。 </p>
+<p>当可以在 $O(1)$ 的时间内计算出 $f(r)-f(l)$，或已预处理出 $f$ 的前缀和时，数论分块就可以在 $O(\sqrt n)$ 的时间内计算上述和式的值。</p>
+<h2 id="引理-1"><a href="#引理-1" class="headerlink" title="引理 1"></a>引理 1</h2><p>对于任意的正整数 $d\leq n$，均有 $| {\lfloor \frac n d \rfloor}| \leq \lfloor2\sqrt n\rfloor$，其中 $|V|$ 表示 $V$ 中的元素个数。</p>
+<p>证明：<br>对于 $d \leq \lfloor \sqrt n \rfloor$，由于 $1\leq d\leq \lfloor \sqrt n \rfloor$ ，故 $ n\geq \lfloor \frac n d \rfloor\geq \lfloor\sqrt n\rfloor$，$\lfloor\frac n d \rfloor$ 有 $\lfloor \sqrt n \rfloor$ 种取值，</p>
+<p>对于 $d\geq \lfloor \sqrt n \rfloor$，由于 $\lfloor \sqrt n \rfloor\leq d\leq n$，故 $\lfloor\sqrt n\rfloor \geq \lfloor \frac n d \rfloor\geq 1$，$\lfloor\frac n d \rfloor$ 也只有 $\lfloor\sqrt n\rfloor$ 种取值。$\Box$</p>
+<p>所以，</p>
+<p>gugugu</p>
+]]></content>
+      <tags>
+        <tag>学习资料</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>初赛知识点</title>
     <url>/chu-sai-zhi-shi-dian.html</url>
     <content><![CDATA[<h2 id="计算机基础知识"><a href="#计算机基础知识" class="headerlink" title="计算机基础知识"></a>计算机基础知识</h2><ol>
@@ -829,24 +847,6 @@
 </ol>
 </li>
 </ol>
-]]></content>
-      <tags>
-        <tag>学习资料</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数论分块</title>
-    <url>/number-theory.html</url>
-    <content><![CDATA[<p>声明：本文参考 <a href="https://oi-wiki.org/math/number-theory/sqrt-decomposition/">OI Wiki</a>，仅为自己的笔记。</p>
-<span id="more"></span>
-
-<p>数论分块可以快速计算一些<strong>除法中含有向下取整的和式</strong>，即形如 $\sum_{i&#x3D;1}^nf(i)g(\lfloor\frac{n}{i}\rfloor)$ 的式子。 </p>
-<p>当可以在 $O(1)$ 的时间内计算出 $f(r)-f(l)$，或已预处理出 $f$ 的前缀和时，数论分块就可以在 $O(\sqrt n)$ 的时间内计算上述和式的值。</p>
-<h2 id="引理-1"><a href="#引理-1" class="headerlink" title="引理 1"></a>引理 1</h2><p>对于任意的正整数 $d\leq n$，均有 $| {\lfloor \frac n d \rfloor}| \leq \lfloor2\sqrt n\rfloor$，其中 $|V|$ 表示 $V$ 中的元素个数。</p>
-<p>证明：<br>对于 $d \leq \lfloor \sqrt n \rfloor$，由于 $1\leq d\leq \lfloor \sqrt n \rfloor$ ，故 $ n\geq \lfloor \frac n d \rfloor\geq \lfloor\sqrt n\rfloor$，$\lfloor\frac n d \rfloor$ 有 $\lfloor \sqrt n \rfloor$ 种取值，</p>
-<p>对于 $d\geq \lfloor \sqrt n \rfloor$，由于 $\lfloor \sqrt n \rfloor\leq d\leq n$，故 $\lfloor\sqrt n\rfloor \geq \lfloor \frac n d \rfloor\geq 1$，$\lfloor\frac n d \rfloor$ 也只有 $\lfloor\sqrt n\rfloor$ 种取值。$\Box$</p>
-<p>所以，</p>
-<p>gugugu</p>
 ]]></content>
       <tags>
         <tag>学习资料</tag>
