@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -18,10 +17,10 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/purple/pace-theme-minimal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/green/pace-theme-bounce.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="假设有递推关系式 $T(n) &#x3D; aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）">
 <meta property="og:type" content="article">
@@ -292,15 +291,14 @@
     <div class="post-body" itemprop="articleBody">
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1859245776&auto=1&height=66"></iframe>
 
-<p>假设有递推关系式 $T(n) &#x3D; aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
+<p>假设有递推关系式 $T(n) = aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
 <span id="more"></span>
-
 <ol>
-<li><p>若 $f(n) &#x3D; O(n^{\log_b a-\varepsilon})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a})$。</p>
+<li><p>若 $f(n) = O(n^{\log_b a-\varepsilon})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) = \Theta(n^{log_b a})$。</p>
 </li>
-<li><p>若 $f(n) &#x3D; \Theta(n^{\log_b a})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) &#x3D; \Theta(n^{log_b a}\log n)$</p>
+<li><p>若 $f(n) = \Theta(n^{\log_b a})$ ，$\varepsilon &gt; 0$ ，那么 $T(n) = \Theta(n^{log_b a}\log n)$</p>
 </li>
-<li><p>若 $f(n) &#x3D; \Omega(n^{\log_b a+\varepsilon})$ ，$\varepsilon &gt; 0$ ，且对于某个常数 $c &lt; 1$ 和所有充分大的 $n$，有 $af(\frac n b) \leq cf(n)$ ，那么 $T(n) &#x3D; \Theta(f(n))$</p>
+<li><p>若 $f(n) = \Omega(n^{\log_b a+\varepsilon})$ ，$\varepsilon &gt; 0$ ，且对于某个常数 $c &lt; 1$ 和所有充分大的 $n$，有 $af(\frac n b) \leq cf(n)$ ，那么 $T(n) = \Theta(f(n))$</p>
 </li>
 </ol>
 <h2 id="人话翻译"><a href="#人话翻译" class="headerlink" title="人话翻译"></a>人话翻译</h2><ol>
@@ -310,72 +308,66 @@
 </li>
 <li><p>比较 $\log_b a$ 与 $k$ 。</p>
 <ul>
-<li><p>若 $\log_b a &gt; k$，则时间主要消耗在递归上，$T(n) &#x3D; \Theta(n^{log_b a})$。</p>
+<li><p>若 $\log_b a &gt; k$，则时间主要消耗在递归上，$T(n) = \Theta(n^{log_b a})$。</p>
 </li>
-<li><p>若 $\log_b a &#x3D; k$，则时间在递归和递归外的计算上消耗相等，$T(n) &#x3D; \Theta(n^{log_b a}\log n)$。</p>
+<li><p>若 $\log_b a = k$，则时间在递归和递归外的计算上消耗相等，$T(n) = \Theta(n^{log_b a}\log n)$。</p>
 </li>
-<li><p>若 $\log_b a &lt; k$，则时间主要消耗在递归之外的计算上，$T(n) &#x3D; \Theta(f(n))$。</p>
+<li><p>若 $\log_b a &lt; k$，则时间主要消耗在递归之外的计算上，$T(n) = \Theta(f(n))$。</p>
 </li>
-<li><p>当 $f(n) &#x3D; \Theta (n^{\log_b a}\log^kn)$，其中 $k \geq 1$ 且为一个常数，则有 $T(n) &#x3D; \Theta (n^{\log_b a}\log^{k+1}n)$</p>
+<li><p>当 $f(n) = \Theta (n^{\log_b a}\log^kn)$，其中 $k \geq 1$ 且为一个常数，则有 $T(n) = \Theta (n^{\log_b a}\log^{k+1}n)$</p>
 <p>（感谢 @<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/469356">Anna黛娜</a> 的补充）</p>
 </li>
 </ul>
 </li>
 </ol>
-<h2 id="实践一下"><a href="#实践一下" class="headerlink" title="实践一下"></a>实践一下</h2><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/t0qvhv6z.png"></p>
+<h2 id="实践一下"><a href="#实践一下" class="headerlink" title="实践一下"></a>实践一下</h2><p><img src="https://cdn.luogu.com.cn/upload/image_hosting/t0qvhv6z.png" alt=""></p>
 <ol>
-<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(n\log n)$。</p>
+<li><p>$a = 2, b = 2, \log_2 2 = 1, k = 1.\log_b a = k$，适用于主定理第二种情况，$T(n) = \Theta(n^{log_b a}\log n) = \Theta(n\log n)$。</p>
 </li>
-<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 1.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n)$。</p>
+<li><p>$a = 1, b = 2, \log_2 1 = 0, k = 1.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) = \Theta(f(n)) = \Theta(n)$。</p>
 </li>
-<li><p>$a &#x3D; 1, b &#x3D; 2, \log_2 1 &#x3D; 0, k &#x3D; 0.\log_b a &#x3D; k$，适用于主定理第二种情况，$T(n) &#x3D; \Theta(n^{log_b a}\log n) &#x3D; \Theta(\log n)$。</p>
+<li><p>$a = 1, b = 2, \log_2 1 = 0, k = 0.\log_b a = k$，适用于主定理第二种情况，$T(n) = \Theta(n^{log_b a}\log n) = \Theta(\log n)$。</p>
 </li>
-<li><p>$a &#x3D; 2, b &#x3D; 2, \log_2 2 &#x3D; 1, k &#x3D; 1.5.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) &#x3D; \Theta(f(n)) &#x3D; \Theta(n\sqrt n)$。</p>
+<li><p>$a = 2, b = 2, \log_2 2 = 1, k = 1.5.\log_b a &lt; k$，适用于主定理第三种情况，$T(n) = \Theta(f(n)) = \Theta(n\sqrt n)$。</p>
 </li>
 </ol>
 <h2 id="还有一点"><a href="#还有一点" class="headerlink" title="还有一点"></a>还有一点</h2><ol>
-<li><p>$T(n) &#x3D; 2^n T(\frac n 2) + n^n $</p>
+<li><p>$T(n) = 2^n T(\frac n 2) + n^n $</p>
 <blockquote>
 <p><strong>此处不满足主定理，$a$ 不是常数</strong></p>
 </blockquote>
 </li>
-<li><p>$T(n) &#x3D; 16T(\frac n 4) + n$</p>
+<li><p>$T(n) = 16T(\frac n 4) + n$</p>
 <blockquote>
-<p>$a &#x3D; 16, b &#x3D; 4, f(n) &#x3D; n, \log_b a &#x3D; 2, 2 &gt; 1$，适用于主定理第一种情况，$T(n) &#x3D; \Theta(n^2)$。</p>
+<p>$a = 16, b = 4, f(n) = n, \log_b a = 2, 2 &gt; 1$，适用于主定理第一种情况，$T(n) = \Theta(n^2)$。</p>
 </blockquote>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1017">NOIP 2015 T19</a></p>
 <blockquote>
-<p>某算法的计算时间表示为递推关系式 $T(n) &#x3D; T(n - 1) + n$（$n \in N^*$ ）及 $T(0)&#x3D;1$，则该算法的时间复杂度为（${\color{green}D}$）。</p>
-</blockquote>
-<blockquote>
+<p>某算法的计算时间表示为递推关系式 $T(n) = T(n - 1) + n$（$n \in N^*$ ）及 $T(0)=1$，则该算法的时间复杂度为（${\color{green}D}$）。</p>
 <p>A. $O(\log n)$<br>B. $O(n\log n) $<br>C. $O(n)$<br>D. $O(n^2)$</p>
-<p>解析：<strong>此处不满足主定理</strong><br>$ \therefore n + (n - 1) + (n - 2) + … +1 &#x3D; \sum\limits_{i &#x3D; 1}^n i &#x3D; \frac{(1+n)n}2 $<br>取最高项次数，复杂度为 $O(n^2)$。</p>
+<p>解析：<strong>此处不满足主定理</strong><br>$ \therefore n + (n - 1) + (n - 2) + … +1 = \sum\limits_{i = 1}^n i = \frac{(1+n)n}2 $<br>取最高项次数，复杂度为 $O(n^2)$。</p>
 </blockquote>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1022">2017 NOIP提高组 T6</a></p>
 <blockquote>
 <p>若某算法的计算时间表示为递推关系式：</p>
 <ul>
-<li><p>$T(N) &#x3D; 2T(\dfrac{N}{2}) + N \log N$</p>
+<li><p>$T(N) = 2T(\dfrac{N}{2}) + N \log N$</p>
 </li>
-<li><p>$T(1) &#x3D; 1$</p>
+<li><p>$T(1) = 1$</p>
 <p>则该算法的时间复杂度为（${\color{green}C}$）。</p>
 </li>
 </ul>
-</blockquote>
-<blockquote>
 <p>A.$O(N)$</p>
 <p>B.$O(N \log N)$</p>
 <p>C.$O(N \log^2 N)$</p>
 <p>D.$O(N^2)$</p>
-</blockquote>
-<blockquote>
 <p>解：</p>
-<p>$\log_ba &#x3D; 1$。当 $k &#x3D; 0$ 时，</p>
-<p>$\begin{aligned}<br> f(N) &amp;&#x3D; \Theta (N^{\log_b a}\log^kN)\\<br> &amp;&#x3D;\Theta(N\log N)<br> \end{aligned}$</p>
+<p>$\log_ba = 1$。当 $k = 0$ 时，</p>
+<p>$\begin{aligned}<br> f(N) &amp;= \Theta (N^{\log_b a}\log^kN)\\\\<br> &amp;=\Theta(N\log N)<br> \end{aligned}$</p>
 <p>故</p>
-<p>$\begin{aligned}<br> T(n) &amp;&#x3D; \Theta (n^{\log_b a}\log^{k+1}n)\\<br> &amp;&#x3D; \Theta(N^{1}\log^{1 + 1} N)\&amp;&#x3D;\Theta(N\log^2 N)<br> \end{aligned}$</p>
+<p>$\begin{aligned}<br> T(n) &amp;= \Theta (n^{\log_b a}\log^{k+1}n)\\\\<br> &amp;= \Theta(N^{1}\log^{1 + 1} N)\\&amp;=\Theta(N\log^2 N)<br> \end{aligned}$</p>
 <p>（感谢 @<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/user/388651">5k_sync_closer</a> 的指正）</p>
 </blockquote>
 </li>
