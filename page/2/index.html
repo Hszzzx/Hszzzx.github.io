@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -15,12 +14,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/green/pace-theme-bounce.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="我们所度过的每个平凡的日常，也许就是连续发生的奇迹">
 <meta property="og:type" content="website">
@@ -49,6 +48,10 @@
 
 
 
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -59,11 +62,9 @@
 <!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -82,7 +83,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -124,15 +125,9 @@
     </div>
   </div>
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-overview-active">
@@ -152,79 +147,152 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Hszzzx"
       src="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
   <p class="site-author-name" itemprop="name">Hszzzx</p>
   <div class="site-description" itemprop="description">我们所度过的每个平凡的日常，也许就是连续发生的奇迹</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
-
-  <div class="links-of-blogroll site-overview-item animated">
-    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/hsbhzz/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;hsbhzz&#x2F;" rel="noopener" target="_blank">hsbhzz</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://ntlazy.github.io/" title="https:&#x2F;&#x2F;ntlazy.github.io" rel="noopener" target="_blank">Nt_yester</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/5k_sync_closer/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;5k_sync_closer&#x2F;" rel="noopener" target="_blank">5k_sync_closer</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/ccxswl/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;ccxswl&#x2F;" rel="noopener" target="_blank">ccxswl</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/weijia33/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;weijia33&#x2F;" rel="noopener" target="_blank">weijia33(OHTT)</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/qkhm/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;qkhm&#x2F;" rel="noopener" target="_blank">qkhm</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/676412/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;676412&#x2F;" rel="noopener" target="_blank">Hszzzx's Blog in luogu</a>
-        </li>
-    </ul>
-  </div>
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/hsbhzz/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;hsbhzz&#x2F;" rel="noopener" target="_blank">hsbhzz</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://ntlazy.github.io/" title="https:&#x2F;&#x2F;ntlazy.github.io" rel="noopener" target="_blank">Nt_yester</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/5k_sync_closer/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;5k_sync_closer&#x2F;" rel="noopener" target="_blank">5k_sync_closer</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/ccxswl/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;ccxswl&#x2F;" rel="noopener" target="_blank">ccxswl</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/weijia33/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;weijia33&#x2F;" rel="noopener" target="_blank">weijia33(OHTT)</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/qkhm/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;qkhm&#x2F;" rel="noopener" target="_blank">qkhm</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/676412/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;676412&#x2F;" rel="noopener" target="_blank">Hszzzx's Blog in luogu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/number-theory.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="我们所度过的每个平凡的日常，也许就是连续发生的奇迹">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/number-theory.html" class="post-title-link" itemprop="url">数论分块</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-03 18:22:55" itemprop="dateCreated datePublished" datetime="2022-10-03T18:22:55+08:00">2022-10-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-12-26 20:38:26" itemprop="dateModified" datetime="2022-12-26T20:38:26+08:00">2022-12-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>声明：本文参考 <a target="_blank" rel="noopener" href="https://oi-wiki.org/math/number-theory/sqrt-decomposition/">OI Wiki</a>，仅为自己的笔记。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/number-theory.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -270,7 +338,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 19:53:40" itemprop="dateModified" datetime="2022-10-24T19:53:40+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 20:37:32" itemprop="dateModified" datetime="2022-12-26T20:37:32+08:00">2022-12-26</time>
     </span>
 
   
@@ -283,9 +351,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <script type="math/tex; mode=display">
-\text{程序人生}</script><pre><code>        人生处处程序，程序片片人生            ——题记
-</code></pre>
+          <p>$$<br>\text{程序人生}<br>$$</p>
+<p>        人生处处程序，程序片片人生            ——题记</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/program-life.html#more" rel="contents">
@@ -355,7 +422,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-22 09:28:06" itemprop="dateModified" datetime="2022-11-22T09:28:06+08:00">2022-11-22</time>
+      <time title="修改时间：2022-12-26 20:35:00" itemprop="dateModified" datetime="2022-12-26T20:35:00+08:00">2022-12-26</time>
     </span>
 
   
@@ -441,7 +508,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 19:44:14" itemprop="dateModified" datetime="2022-10-24T19:44:14+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 20:54:50" itemprop="dateModified" datetime="2022-12-26T20:54:50+08:00">2022-12-26</time>
     </span>
 
   
@@ -524,7 +591,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-22 09:25:36" itemprop="dateModified" datetime="2022-11-22T09:25:36+08:00">2022-11-22</time>
+      <time title="修改时间：2022-12-26 20:39:10" itemprop="dateModified" datetime="2022-12-26T20:39:10+08:00">2022-12-26</time>
     </span>
 
   
@@ -539,7 +606,7 @@
     <div class="post-body" itemprop="articleBody">
           <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1859245776&auto=1&height=66"></iframe>
 
-<p>假设有递推关系式 $T(n) = aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
+<p>假设有递推关系式 $T(n) &#x3D; aT(\frac n b )+ f(n)$， 其中 $T(n)$ 为问题规模， $a$ 为递推的子问题的数量，$\dfrac n b$ 为每个子问题的规模（假设每个字问题规模基本一样），$f(n)$ 为递推以外进行的计算工作。$a \geq 1,b&gt;1$ 且为常数，$f(n)$ 为函数，$T(n)$ 为非负整数。则有以下结果（分类讨论）</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Master-theorem.html#more" rel="contents">
@@ -609,7 +676,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 19:52:26" itemprop="dateModified" datetime="2022-10-24T19:52:26+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 20:46:50" itemprop="dateModified" datetime="2022-12-26T20:46:50+08:00">2022-12-26</time>
     </span>
 
   
@@ -694,7 +761,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-22 09:29:34" itemprop="dateModified" datetime="2022-11-22T09:29:34+08:00">2022-11-22</time>
+      <time title="修改时间：2022-12-26 21:26:10" itemprop="dateModified" datetime="2022-12-26T21:26:10+08:00">2022-12-26</time>
     </span>
 
   
@@ -734,10 +801,11 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
 
-</div>
+<div class="headband"></div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -759,12 +827,28 @@
   </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
 
 

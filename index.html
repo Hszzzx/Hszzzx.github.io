@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -15,12 +14,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/green/pace-theme-bounce.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"hszzzx.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-1}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="我们所度过的每个平凡的日常，也许就是连续发生的奇迹">
 <meta property="og:type" content="website">
@@ -49,6 +48,10 @@
 
 
 
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -59,11 +62,9 @@
 <!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
         <span class="toggle-line"></span>
@@ -82,7 +83,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
         <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
@@ -124,15 +125,9 @@
     </div>
   </div>
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-overview-active">
@@ -152,79 +147,243 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Hszzzx"
       src="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
   <p class="site-author-name" itemprop="name">Hszzzx</p>
   <div class="site-description" itemprop="description">我们所度过的每个平凡的日常，也许就是连续发生的奇迹</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
-
-  <div class="links-of-blogroll site-overview-item animated">
-    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/hsbhzz/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;hsbhzz&#x2F;" rel="noopener" target="_blank">hsbhzz</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://ntlazy.github.io/" title="https:&#x2F;&#x2F;ntlazy.github.io" rel="noopener" target="_blank">Nt_yester</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/5k_sync_closer/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;5k_sync_closer&#x2F;" rel="noopener" target="_blank">5k_sync_closer</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/ccxswl/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;ccxswl&#x2F;" rel="noopener" target="_blank">ccxswl</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/weijia33/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;weijia33&#x2F;" rel="noopener" target="_blank">weijia33(OHTT)</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/qkhm/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;qkhm&#x2F;" rel="noopener" target="_blank">qkhm</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://www.luogu.com.cn/blog/676412/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;676412&#x2F;" rel="noopener" target="_blank">Hszzzx's Blog in luogu</a>
-        </li>
-    </ul>
-  </div>
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/hsbhzz/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;hsbhzz&#x2F;" rel="noopener" target="_blank">hsbhzz</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://ntlazy.github.io/" title="https:&#x2F;&#x2F;ntlazy.github.io" rel="noopener" target="_blank">Nt_yester</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/5k_sync_closer/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;5k_sync_closer&#x2F;" rel="noopener" target="_blank">5k_sync_closer</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/ccxswl/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;ccxswl&#x2F;" rel="noopener" target="_blank">ccxswl</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/weijia33/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;weijia33&#x2F;" rel="noopener" target="_blank">weijia33(OHTT)</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/qkhm/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;qkhm&#x2F;" rel="noopener" target="_blank">qkhm</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://www.luogu.com.cn/blog/676412/" title="https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;blog&#x2F;676412&#x2F;" rel="noopener" target="_blank">Hszzzx's Blog in luogu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/Politics.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
+      <meta itemprop="name" content="Hszzzx">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hszzzx's Blog">
+      <meta itemprop="description" content="我们所度过的每个平凡的日常，也许就是连续发生的奇迹">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Hszzzx's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Politics.html" class="post-title-link" itemprop="url">八下政治1.1知识点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-12-26 20:31:50 / 修改时间：20:34:28" itemprop="dateCreated datePublished" datetime="2022-12-26T20:31:50+08:00">2022-12-26</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li><p>我国宪法是党的主张和 <strong>人民</strong> 意志的 <strong>统一</strong>，是治国安邦的总章程。</p>
+</li>
+<li><p>宪法的 <strong>核心价值追求</strong>：规范国家权 <strong>力</strong> 运行以保障公民权 <strong>利</strong>。</p>
+</li>
+<li><p>宪法的核心内容：公民的 <strong>基本权利</strong> 和 <strong>基本义务</strong>。</p>
+</li>
+<li><p>我国的 <strong>国家性质</strong>（国体）：中华人民共和国是 <strong>工人阶级</strong> 领导的，以 <strong>工农联盟</strong> 为基础的 <strong>人民民主专政</strong> 的 <strong>社会主义国家</strong>。</p>
+</li>
+<li><p>我国的 <strong>根本制度</strong>：社会主义制度。</p>
+<p>我国的 <strong>根本政治制度</strong>：人民代表大会制度。</p>
+<p>我国的 <strong>基本</strong> 制度：</p>
+<ul>
+<li><p>中国共产党领导的多党合作和政治协商制度；</p>
+</li>
+<li><p>民族区域自治制度；</p>
+</li>
+<li><p>基层群众自治制度。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>宪法的基本原则</strong>：我国是 <strong>人民民主专政</strong> 的社会主义国家，国家的一切 <strong>权力</strong> 属于 <strong>人民</strong>。</p>
+</li>
+<li><p>我国 <strong>经济制度的基础</strong> 是生产资料的 <strong>社会主义公有制</strong>。</p>
+</li>
+<li><p>中国共产党 <strong>领导</strong> 人民 <strong>制定</strong> 宪法法律。</p>
+</li>
+<li><p>党—— <strong>执</strong> 政，政府—— <strong>行</strong> 政，党和政府执政为民（√）</p>
+</li>
+<li><p>一切 <strong>权力</strong> 属于 <strong>人民</strong> 的宪法原则，归根到底就是要保证人民当家 <strong>作</strong> 主。</p>
+</li>
+<li><p>广大人民通过 <strong>人民代表大会</strong> 行使国家权力。</p>
+<p>人民可以 <strong>直接</strong> 行使国家权力，<strong>直接</strong> 管理国家事务（×）间接</p>
+<p>人民参与国家管理（√）</p>
+<p><strong>人大代表</strong> 直接行使国家权力（√）</p>
+<p>人民代表大会是人民行使国家权力的 <strong>机关</strong>（√）</p>
+</li>
+<li><p><strong>国家的 &#x2F; 中国共产党</strong> 的指导思想是：马列毛邓三科习</p>
+</li>
+<li><p><strong>中国特色</strong> 社会主义指导思想是：邓三科习</p>
+</li>
+<li><p>宪法规定了国家的 <strong>根本制度、根本任务</strong> 和基本原则，是国家的根本法，具有 <strong>最高的法律效力</strong></p>
+</li>
+<li><p>宪法是 <strong>一切组织和个人</strong> 的 <strong>根本活动准则</strong>，也是 <strong>最高行为准则</strong>。</p>
+</li>
+<li><p>全国各族人民的 <strong>共同理想</strong> &#x2F; 目标：把我国建设成为富强、民主、文明、和谐、美丽的社会主义现代化强国。</p>
+</li>
+<li><p>为什么要坚持中国共产党的领导</p>
+<ol>
+<li><p>中国共产党是 <strong>中国工人阶级</strong> 的先锋队，同时是 <strong>中国人民和中华民族</strong> 的先锋队；</p>
+</li>
+<li><p>全心全意为人民服务是党的 <strong>根本宗旨</strong>；</p>
+</li>
+<li><p>党的 <strong>最高理想</strong> 和 <strong>最终目标</strong> 是 <strong>实现共产主义</strong>；</p>
+</li>
+<li><p>中国共产党领导是中国特色社会主义 <strong>最本质的特征</strong>，是中国特色社会主义 <strong>制度</strong> 的 <strong>最大优势</strong>；</p>
+</li>
+</ol>
+</li>
+<li><p>党的 <strong>初心和使命</strong>：为中国人民谋幸福，为中华民族谋复兴</p>
+</li>
+<li><p>党的 <strong>奋斗目标</strong>：人民对美好生活的向往</p>
+</li>
+<li><p>党的 <strong>发展思想</strong>：坚持以人民为中心</p>
+</li>
+<li><p>党的 <strong>宗旨</strong>：为人民服务。</p>
+</li>
+<li><p>党是最高政治领导力量</p>
+</li>
+<li><p>必背大题</p>
+<ol>
+<li><p>国家性质。</p>
+</li>
+<li><p>根本制度 &amp; 根本政治制度。</p>
+</li>
+<li><p>为什么坚持中国共产党的领导？</p>
+</li>
+<li><p>宪法如何保障一切权力属于人民？</p>
+</li>
+<li><p>为什么尊重和保障人权？</p>
+</li>
+<li><p>国家如何尊重和保障人权？</p>
+</li>
+<li><p>如何坚持中国共产党的领导？</p>
+</li>
+<li><p>党的领导地位是如何确定的？</p>
+</li>
+<li><p>中国共产党与宪法、法律之间的关系是怎样的？</p>
+</li>
+<li><p>宪法的基本原则。</p>
+</li>
+<li><p>宪法如何设置国家机构？</p>
+</li>
+<li><p>国家机构是如何产生的？</p>
+</li>
+<li><p>国家机构实行民主集中制原则的三个表现。</p>
+</li>
+<li><p>宪法为什么规范权力运行？</p>
+</li>
+<li><p>宪法如何规范权力运行？</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -270,7 +429,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-22 12:28:06" itemprop="dateModified" datetime="2022-12-22T12:28:06+08:00">2022-12-22</time>
+      <time title="修改时间：2022-12-26 20:39:26" itemprop="dateModified" datetime="2022-12-26T20:39:26+08:00">2022-12-26</time>
     </span>
 
   
@@ -338,7 +497,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/some-skills-of-hexo-n-next.html" class="post-title-link" itemprop="url">一些 hexo 的奇技淫巧</a>
+          <a href="/some-skills-of-hexo-n-next.html" class="post-title-link" itemprop="url">一些 hexo 的技巧</a>
         </h2>
 
         <div class="post-meta-container">
@@ -356,7 +515,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-22 12:50:32" itemprop="dateModified" datetime="2022-12-22T12:50:32+08:00">2022-12-22</time>
+      <time title="修改时间：2022-12-26 20:36:58" itemprop="dateModified" datetime="2022-12-26T20:36:58+08:00">2022-12-26</time>
     </span>
 
   
@@ -439,7 +598,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-23 14:35:54" itemprop="dateModified" datetime="2022-11-23T14:35:54+08:00">2022-11-23</time>
+      <time title="修改时间：2022-12-26 20:38:14" itemprop="dateModified" datetime="2022-12-26T20:38:14+08:00">2022-12-26</time>
     </span>
 
   
@@ -530,7 +689,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-12-07 09:37:48" itemprop="dateModified" datetime="2022-12-07T09:37:48+08:00">2022-12-07</time>
+      <time title="修改时间：2022-12-26 20:39:38" itemprop="dateModified" datetime="2022-12-26T20:39:38+08:00">2022-12-26</time>
     </span>
 
   
@@ -617,7 +776,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-22 09:22:44" itemprop="dateModified" datetime="2022-11-22T09:22:44+08:00">2022-11-22</time>
+      <time title="修改时间：2022-12-26 20:45:36" itemprop="dateModified" datetime="2022-12-26T20:45:36+08:00">2022-12-26</time>
     </span>
 
   
@@ -702,7 +861,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 14:15:28" itemprop="dateModified" datetime="2022-10-24T14:15:28+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 20:46:24" itemprop="dateModified" datetime="2022-12-26T20:46:24+08:00">2022-12-26</time>
     </span>
 
   
@@ -715,7 +874,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 / 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（蓝Dev 还不支持 C++14）</p>
+          <p>Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 &#x2F; 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（蓝Dev 还不支持 C++14）</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Cpp-STL.html#more" rel="contents">
@@ -785,7 +944,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 18:46:52" itemprop="dateModified" datetime="2022-10-24T18:46:52+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 20:37:58" itemprop="dateModified" datetime="2022-12-26T20:37:58+08:00">2022-12-26</time>
     </span>
 
   
@@ -868,7 +1027,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 18:44:32" itemprop="dateModified" datetime="2022-10-24T18:44:32+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 21:20:10" itemprop="dateModified" datetime="2022-12-26T21:20:10+08:00">2022-12-26</time>
     </span>
 
   
@@ -951,7 +1110,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 18:44:48" itemprop="dateModified" datetime="2022-10-24T18:44:48+08:00">2022-10-24</time>
+      <time title="修改时间：2022-12-26 21:26:02" itemprop="dateModified" datetime="2022-12-26T21:26:02+08:00">2022-12-26</time>
     </span>
 
   
@@ -990,94 +1149,12 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://hszzzx.github.io/number-theory.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.luogu.com.cn/upload/image_hosting/v10j9y7n.png">
-      <meta itemprop="name" content="Hszzzx">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hszzzx's Blog">
-      <meta itemprop="description" content="我们所度过的每个平凡的日常，也许就是连续发生的奇迹">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Hszzzx's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/number-theory.html" class="post-title-link" itemprop="url">数论分块</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-10-03 18:22:55" itemprop="dateCreated datePublished" datetime="2022-10-03T18:22:55+08:00">2022-10-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-24 18:47:12" itemprop="dateModified" datetime="2022-10-24T18:47:12+08:00">2022-10-24</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>声明：本文参考 <a target="_blank" rel="noopener" href="https://oi-wiki.org/math/number-theory/sqrt-decomposition/">OI Wiki</a>，仅为自己的笔记。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/number-theory.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
-</div>
+<div class="headband"></div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -1099,12 +1176,28 @@
   </footer>
 
   
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
   <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
 
 
