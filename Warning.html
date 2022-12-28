@@ -276,7 +276,6 @@
 <p>局部变量可能会屏蔽全局变量（变量<strong>定两回</strong>）</p>
 <p><code>unsigned long long</code> 占位符是 <code>lu</code>，<code>short</code> 占位符是 <code>hd</code></p>
 <span id="more"></span>
-
 <p><code>++i, ++j, --i, --j</code> </p>
 <p>压行的时候分清<strong>分号和逗号</strong>，注意<strong>语句控制范围</strong> ，保守起见要加大括号</p>
 <p>一顿操作猛如虎，忘了清零二百五（又：多测不<strong>清零</strong>，抱灵两行泪）</p>
@@ -289,7 +288,6 @@
 <p>谨防<strong>不明意义变量</strong>，<strong>重名变量</strong>（如 <code>l</code> 和 <code>t[p].l</code>），<strong>分不清的变量</strong>（如 <code>ii, ij, jj, ji</code>）</p>
 <p>观察如下代码片段</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[n++]) != EOF);</span><br></pre></td></tr></table></figure>
-
 <p>不易发现的错误点在于，当 <code>scanf(&quot;%d&quot;, &amp;a[n++]);</code> 读不到值时，循环终止，<strong>此时 n 为数组元素个数 + 2</strong>， 需要 <code>n -= 2</code>。</p>
 <p><strong>无向图存边数组开双倍空间（警钟敲烂）</strong></p>
 <hr>

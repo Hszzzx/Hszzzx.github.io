@@ -274,7 +274,6 @@
     <div class="post-body" itemprop="articleBody">
         <h2 id="简化-URL"><a href="#简化-URL" class="headerlink" title="简化 URL"></a>简化 URL</h2><p>在 _config.yml 中找到 <code>permalink</code> 字段，其默认值为 <code>:year/:month/:day/:title/</code>，显示效果为 <code>年/月/日/题目.html</code> 。我将其改成了 <code>:title.html</code>，效果为 <code>/题目.html</code>。</p>
 <span id="more"></span>
-
 <p>Tips：这个 <code>title</code> 字段截取的是文章在 <code>source\_posts</code> 文件夹的 <strong>文件名</strong>，所以为避免出现中文网址，可将文章文件名设为英文，而在文章内部使用中文。</p>
 <h2 id="提升-deploy-速度"><a href="#提升-deploy-速度" class="headerlink" title="提升 deploy 速度"></a>提升 deploy 速度</h2><ol>
 <li><p>将 <code>#deploy:</code> 下的 <code>repo:</code> 改为 <code>https://github.com/用户名/用户名.github.io.git</code>；</p>
@@ -282,17 +281,18 @@
 <li><p>使用管理员账户，在 <code>C:\Windows\System32\drivers\etc</code> 中找到 hosts，右击 hosts -&gt; 属性 -&gt; 安全 -&gt; 编辑 -&gt; Users -&gt; 勾选“写入” -&gt; 一路确定；</p>
 </li>
 <li><p>打开 hosts，在末尾加上：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">140.82.113.3    github.com</span><br><span class="line">185.199.108.153 assets-cdn.github.com</span><br><span class="line">199.232.69.194  github.global.ssl.fastly.net </span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">140.82.113.3    github.com</span><br><span class="line">185.199.108.153 assets-cdn.github.com</span><br><span class="line">199.232.69.194  github.global.ssl.fastly.net </span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>保存，退出。 </p>
 <h2 id="友链"><a href="#友链" class="headerlink" title="友链"></a>友链</h2><p>在 _config.next.yml 中，找到 <code>link</code> 字段，格式为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">links:</span><br><span class="line">  显示的人名或其他: 网址</span><br><span class="line">  Nt_yester: https://ntlazy.github.io</span><br></pre></td></tr></table></figure>
-
 <h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><ol>
 <li><p>在 cmd 中输入 <code>npm install hexo-generator-search --save</code> ;</p>
 </li>
 <li><p>在 _config.next.yml 文件中，找到 <code>local_search</code>：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Local Search</span><br><span class="line"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # If auto, trigger search by changing input.</span><br><span class="line">  # If manual, trigger search by pressing enter key or search button.</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Local Search</span><br><span class="line"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # If auto, trigger search by changing input.</span><br><span class="line">  # If manual, trigger search by pressing enter key or search button.</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h2 id="深色模式"><a href="#深色模式" class="headerlink" title="深色模式"></a>深色模式</h2><p>在 _config.next.yml 中，找到 <code>darkmode</code> 字段，将其值修改为 <code>true</code> 即可。</p>
 <h2 id="播放音乐"><a href="#播放音乐" class="headerlink" title="播放音乐"></a>播放音乐</h2><p>对机房没有耳机的朋友们不太友好。</p>
@@ -300,7 +300,6 @@
 <h2 id="加个头像"><a href="#加个头像" class="headerlink" title="加个头像"></a>加个头像</h2><p>会显示在边栏中。</p>
 <p>在 _config.next.yml 中找到 <code>avatar</code> 字段</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url: 图床网址</span><br></pre></td></tr></table></figure>
-
 <hr>
 
     </div>

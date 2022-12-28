@@ -274,10 +274,9 @@
     <div class="post-body" itemprop="articleBody">
         <p>声明：本文参考 <a target="_blank" rel="noopener" href="https://oi-wiki.org/math/number-theory/sqrt-decomposition/">OI Wiki</a>，仅为自己的笔记。</p>
 <span id="more"></span>
-
-<p>数论分块可以快速计算一些<strong>除法中含有向下取整的和式</strong>，即形如 $\sum_{i&#x3D;1}^nf(i)g(\lfloor\frac{n}{i}\rfloor)$ 的式子。 </p>
+<p>数论分块可以快速计算一些<strong>除法中含有向下取整的和式</strong>，即形如 $\sum_{i=1}^nf(i)g(\lfloor\frac{n}{i}\rfloor)$ 的式子。 </p>
 <p>当可以在 $O(1)$ 的时间内计算出 $f(r)-f(l)$，或已预处理出 $f$ 的前缀和时，数论分块就可以在 $O(\sqrt n)$ 的时间内计算上述和式的值。</p>
-<h2 id="引理-1"><a href="#引理-1" class="headerlink" title="引理 1"></a>引理 1</h2><p>对于任意的正整数 $d\leq n$，均有 $| {\lfloor \frac n d \rfloor}| \leq \lfloor2\sqrt n\rfloor$，其中 $|V|$ 表示 $V$ 中的元素个数。</p>
+<h2 id="引理-1"><a href="#引理-1" class="headerlink" title="引理 1"></a>引理 1</h2><p>对于任意的正整数 $d\leq n$，均有 $| \{\lfloor \frac n d \rfloor\}| \leq \lfloor2\sqrt n\rfloor$，其中 $|V|$ 表示 $V$ 中的元素个数。</p>
 <p>证明：<br>对于 $d \leq \lfloor \sqrt n \rfloor$，由于 $1\leq d\leq \lfloor \sqrt n \rfloor$ ，故 $ n\geq \lfloor \frac n d \rfloor\geq \lfloor\sqrt n\rfloor$，$\lfloor\frac n d \rfloor$ 有 $\lfloor \sqrt n \rfloor$ 种取值，</p>
 <p>对于 $d\geq \lfloor \sqrt n \rfloor$，由于 $\lfloor \sqrt n \rfloor\leq d\leq n$，故 $\lfloor\sqrt n\rfloor \geq \lfloor \frac n d \rfloor\geq 1$，$\lfloor\frac n d \rfloor$ 也只有 $\lfloor\sqrt n\rfloor$ 种取值。$\Box$</p>
 <p>所以，</p>
