@@ -11,15 +11,17 @@
       
       
       
-        <link rel="prev" href="../%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F%20by_%E6%9D%8E%E5%8D%9A%E6%9D%B0/">
+        <link rel="prev" href="../%E5%88%9D%E8%B5%9B%E9%94%99%E9%A2%98%E9%9B%86/">
       
+      
+        <link rel="next" href="../%E6%88%91%E4%BB%AC%E6%98%AFOIer/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
-        <title>警逝后人 - My Docs</title>
+        <title>单源最短路径 - My Docs</title>
       
     
     
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              警逝后人
+              单源最短路径
             
           </span>
         </div>
@@ -352,10 +354,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       单源最短路径
     </a>
   </li>
@@ -424,12 +428,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../%E9%94%99%E8%AF%AF/" class="md-tabs__link">
       警逝后人
     </a>
   </li>
@@ -665,11 +667,55 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          单源最短路径
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         单源最短路径
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    单源最短路径
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spfa" class="md-nav__link">
+    SPFA 算法的实现步骤
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -755,21 +801,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E9%94%99%E8%AF%AF/" class="md-nav__link">
         警逝后人
       </a>
-      
     </li>
   
 
@@ -791,8 +827,28 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    单源最短路径
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spfa" class="md-nav__link">
+    SPFA 算法的实现步骤
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -810,24 +866,153 @@
   
 
 
-<h1 id="_1">警逝后人</h1>
-<p>局部变量可能会屏蔽全局变量（变量<strong>定两回</strong>）</p>
-<p><code>unsigned long long</code> 占位符是 <code>lu</code>，<code>short</code> 占位符是 <code>hd</code></p>
-<p><code>++i, ++j, --i, --j</code> </p>
-<p>压行的时候分清<strong>分号和逗号</strong>，注意<strong>语句控制范围</strong> ，保守起见要加大括号</p>
-<p>一顿操作猛如虎，忘了清零二百五（又：多测不<strong>清零</strong>，抱灵两行泪）</p>
-<p>如题目中要求<strong>严格输出</strong>，不要多空格</p>
-<p><strong>构造函数数据类型</strong>不要出错</p>
-<p><code>0x7fffffff</code>（7 个 f） 只是 <code>int</code> 的最大值， <code>long long</code> 的最大值是 <code>0x7ffffffffffffff</code>（14 个 f）</p>
-<p>遇到给出<strong>比例，分数</strong>等，如未明确说明，需<strong>化简</strong></p>
-<p><code>maxx</code>，<code>minn</code> 的<strong>初始化</strong></p>
-<p>如果 <code>sort</code> 很悬，使用 <code>stable_sort</code> 或 <code>merge</code></p>
-<p>谨防<strong>不明意义变量</strong>，<strong>重名变量</strong>（如 <code>l</code> 和 <code>t[p].l</code>），<strong>分不清的变量</strong>（如 <code>ii, ij, jj, ji</code>）</p>
-<p>观察如下代码片段</p>
-<pre><code class="language-cpp">while (scanf(&quot;%d&quot;, &amp;a[n++]) != EOF);
+  <h1>单源最短路径</h1>
+
+<h3 id="_1">单源最短路径</h3>
+<ol>
+<li><strong>Dijkstra</strong></li>
+</ol>
+<p>Dijkstra 算法用于求 <strong>非负权图</strong> 上单源最短路径的算法</p>
+<p>松弛操作：对于边$u$，$v$，松弛操作对应下面的式子</p>
+<p>$dis[v] = \min(dis[v],dis[u] + w[u,v]);$</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;queue&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+const int N = 1e5+10;//结点MAX
+const int M = 2e5 + 10;//边MAX
+const int INF = 0x7fffffff;//正无穷
+int head[N], tot;
+//head[i]表示最后一个以i为起点的边的编号
+int dis[N];
+//dis[i]存储从起点st到第i个结点的最短路径的长度
+bool vis[N];
+//vis[i]表示是否求出了st-&gt;i的最短路
+struct Edge {int to, next, w;}edge[M];
+//边，to是终点，next表示和当前节点起点相同的上一条边
+void add(int u, int v, int w)//加边，起点，终点，权值
+{
+    edge[++tot].to = v;
+    edge[tot].w = w;
+    edge[tot].next = head[u];
+    head[u] = tot;//最后一条以u为起点的边的编号变为当前边
+}
+
+int main()
+{
+    priority_queue
+    &lt;pair&lt;int,int&gt;, vector&lt;pair&lt;int, int&gt; &gt;, greater&lt;pair&lt;int, int&gt; &gt; &gt; Q;
+    //建立小根堆存储dis，编号，确保每次取出dis最小的边
+    int n, m, s;//点数，边数，开始点
+    cin &gt;&gt; n &gt;&gt; m &gt;&gt; s;
+    for (int i = 1; i &lt;= m; ++i)
+    {
+        int u, v, w;
+        cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;
+        add(u, v, w);
+    }//建图
+
+    for (int i = 1; i &lt;= n; i++) 
+        dis[i] = INF;//初始化为正无穷
+
+    Q.push(make_pair(0, s)); dis[s] = 0;//初始化
+
+    while (!Q.empty())
+    {
+        int t = Q.top().second; Q.pop();//取出队首元素编号
+        if(vis[t]) continue;//如果该点的最短路已确定，跳过
+        vis[t] = 1;
+        for (int i = head[t]; i; i = edge[i].next)
+        //遍历每一条以t为起点的边
+        {
+            int to = edge[i].to;//找到该边的终点
+            if (dis[t] + edge[i].w &lt; dis[to])
+            //尝试对该边进行松弛操作
+            {
+                dis[to] = dis[t] + edge[i].w;
+                Q.push(make_pair(dis[to], to));
+            }
+        }
+    }
+    for (int i = 1; i &lt;= n; ++i)
+    {
+        cout &lt;&lt; dis[i] &lt;&lt; ' ';
+    }
+
+    return 0;
+}
 </code></pre>
-<p>不易发现的错误点在于，当 <code>scanf("%d", &amp;a[n++]);</code> 读不到值时，循环终止，<strong>此时 n 为数组元素个数 + 2</strong>， 需要 <code>n -= 2</code>。</p>
-<p><strong>无向图存边数组开双倍空间（警钟敲烂）</strong></p>
+<p>SPFA 算法</p>
+<p>SPFA 算法是一种基于松弛（relax）操作的最短路算法，可以求出有负权的图的最短路，并可以对最短路不存在的情况进行判断。</p>
+<p>对于边 $(u,v)$，松弛操作对应下面的式子：$dis(v)=min(dis(v),dis(u)+w(u,v))$。</p>
+<p>这么做的含义是显然的：我们尝试用 $s-&gt;u-&gt;v$（其中 $s-&gt;u$ 的路径取最短路）这条路径去更新 $v$ 点最短路的长度，如果这条路径更优，就进行更新。</p>
+<p>$Bellman-Ford$ 算法所做的，就是不断尝试对图上每一条边进行松弛。我们每进行一轮循环，就对图上所有的边都尝试进行一次松弛操作，当一次循环中没有成功的松弛操作时，算法停止。</p>
+<pre><code class="language-c">bool Bellman-Ford (int n, int s) {
+  memset(dis, 63, sizeof(dis));
+  dis[s] = 0;
+  bool flag;  // 判断一轮循环过程中是否发生松弛操作
+  for (int i = 1; i &lt;= n; i++) {
+    flag = false;
+    for (int u = 1; u &lt;= n; u++) {
+      if (dis[u] == inf) continue;
+      // 无穷大与常数加减仍然为无穷大
+      // 因此最短路长度为 inf 的点引出的边不可能发生松弛操作
+      for (int i = head[u]; i; i = e[i].net) {
+        int v = e[i].to, w = e[i].w;
+        if (dis[v] &gt; dis[u] + w) {
+          dis[v] = dis[u] + w;
+          flag = true;
+        }
+      }
+    }
+    // 没有可以松弛的边时就停止算法
+    if (!flag) break;
+  }
+  // 第 n 轮循环仍然可以松弛时说明 s 点可以抵达一个负环
+  return flag;
+}
+</code></pre>
+<p>每次循环是 $O(m)$ 的，那么最多会循环多少次呢？</p>
+<p>最短路存在的情况下，由于一次松弛操作会使最短路的边数至少 $+1$，而最短路的边数最多为 $n-1$，因此整个算法最多执行 $n-1$ 轮松弛操作。故总时间复杂度为 $O(nm)$</p>
+<p>但还有一种情况，如果从 $s$ 点出发，抵达一个负环时，松弛操作会无休止地进行下去。注意到前面的论证中已经说明了，对于最短路存在的图，松弛操作最多只会执行 $n-1$ 轮，因此如果第 $n$ 轮循环时仍然存在能松弛的边，说明从 $s$ 点出发，能够抵达一个负环。</p>
+<p>很多时候我们并不需要那么多无用的松弛操作。</p>
+<p>很显然，只有上一次被松弛的结点，所连接的边，才有可能引起下一次的松弛操作。</p>
+<p>那么我们用队列来维护“哪些结点可能会引起松弛操作”，就能只访问必要的边了。</p>
+<h2 id="spfa"><strong>SPFA 算法的实现步骤</strong></h2>
+<p>​实现 SPFA 算法需要一个队列 $q$，一个标记数组 $vis[N]$ 用来标记某点是否在队列中。数组 $dis[N]$，用来存储起点到某个点的最短距离。</p>
+<ul>
+<li>
+<p>初始化 $dis$ 数组为正无穷</p>
+</li>
+<li>
+<p>从起点开始枚举每个点的所有子节点，设父节点到子节点的距离为 $s$，父节点到起点的距离为 $dist[u]$，子节点到起点的距离为$dist[v]$，如果 $dist[u]+s&lt;dist[v]$ 当且仅当上式成立时就更新 $dist[v]$，如果 $v$ 没有在队列中，就将$v$入队。</p>
+</li>
+</ul>
+<pre><code class="language-cpp">void spfa()
+{
+    queue&lt;int&gt; q;
+    memset(dis,233333,sizeof(dis));
+    q.push(n); dis[n] = 0; in[n] = 1;
+    while(!q.empty())
+    {
+        int t = q.front(); q.pop(); in[t] = 0;
+        for(int i = head[t]; i; i = e[i].net)
+        {
+            int to = e[i].to;
+            if(dis[to] &gt; dis[t] + e[i].w)
+            {
+                dis[to] = dis[t] + e[i].w;
+                if(!in[to])
+                {
+                    q.push(to);
+                    in[to] = 1;
+                }
+            }
+        }
+    }
+}
+</code></pre>
 
 
 

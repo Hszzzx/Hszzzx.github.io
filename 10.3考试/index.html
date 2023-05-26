@@ -11,15 +11,17 @@
       
       
       
-        <link rel="prev" href="../%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F%20by_%E6%9D%8E%E5%8D%9A%E6%9D%B0/">
+        <link rel="prev" href="..">
       
+      
+        <link rel="next" href="../10.6%E9%A2%98%E8%A7%A3/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
-        <title>警逝后人 - My Docs</title>
+        <title>[10.3 考试](https://www.luogu.com.cn/training/231581) - My Docs</title>
       
     
     
@@ -71,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#103" class="md-skip">
           跳转至
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              警逝后人
+              [10.3 考试](https://www.luogu.com.cn/training/231581)
             
           </span>
         </div>
@@ -220,10 +222,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../10.3%E8%80%83%E8%AF%95/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       [10.3 考试](https://www.luogu.com.cn/training/231581)
     </a>
   </li>
@@ -424,12 +428,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+    <a href="../%E9%94%99%E8%AF%AF/" class="md-tabs__link">
       警逝后人
     </a>
   </li>
@@ -500,11 +502,21 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../10.3%E8%80%83%E8%AF%95/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         [10.3 考试](https://www.luogu.com.cn/training/231581)
       </a>
+      
     </li>
   
 
@@ -755,21 +767,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E9%94%99%E8%AF%AF/" class="md-nav__link">
         警逝后人
       </a>
-      
     </li>
   
 
@@ -810,24 +812,60 @@
   
 
 
-<h1 id="_1">警逝后人</h1>
-<p>局部变量可能会屏蔽全局变量（变量<strong>定两回</strong>）</p>
-<p><code>unsigned long long</code> 占位符是 <code>lu</code>，<code>short</code> 占位符是 <code>hd</code></p>
-<p><code>++i, ++j, --i, --j</code> </p>
-<p>压行的时候分清<strong>分号和逗号</strong>，注意<strong>语句控制范围</strong> ，保守起见要加大括号</p>
-<p>一顿操作猛如虎，忘了清零二百五（又：多测不<strong>清零</strong>，抱灵两行泪）</p>
-<p>如题目中要求<strong>严格输出</strong>，不要多空格</p>
-<p><strong>构造函数数据类型</strong>不要出错</p>
-<p><code>0x7fffffff</code>（7 个 f） 只是 <code>int</code> 的最大值， <code>long long</code> 的最大值是 <code>0x7ffffffffffffff</code>（14 个 f）</p>
-<p>遇到给出<strong>比例，分数</strong>等，如未明确说明，需<strong>化简</strong></p>
-<p><code>maxx</code>，<code>minn</code> 的<strong>初始化</strong></p>
-<p>如果 <code>sort</code> 很悬，使用 <code>stable_sort</code> 或 <code>merge</code></p>
-<p>谨防<strong>不明意义变量</strong>，<strong>重名变量</strong>（如 <code>l</code> 和 <code>t[p].l</code>），<strong>分不清的变量</strong>（如 <code>ii, ij, jj, ji</code>）</p>
-<p>观察如下代码片段</p>
-<pre><code class="language-cpp">while (scanf(&quot;%d&quot;, &amp;a[n++]) != EOF);
+<h1 id="103"><a href="https://www.luogu.com.cn/training/231581">10.3 考试</a></h1>
+<h1 id="t1-goodstr">T1 goodstr</h1>
+<p>显然，一道DP</p>
+<p>由题意得：~~第一位没什么用~~。一个好串应形如 <code>X AA BB CC DD</code>。</p>
+<h2 id="_1">状态设计</h2>
+<p>观察脚造好串 <code>a bb cc aa</code> 易得</p>
+<p>令<code>f[i]</code>表示到<code>i</code>的 (最长好串长度 + 1) / 2，即除了第一位外 “两位相同串” 的个数 + 1。</p>
+<p>用当前字符上一次出现的位置来更新该值。</p>
+<h2 id="_2">必要变量声明</h2>
+<p><code>str</code> 为字符串，<code>f</code> 为dp数组，<code>last[str[i] - 'a']</code>为 <code>str[i]</code> 上一次出现的位置。</p>
+<p>所有第一次出现字符的<code>last</code>标记为<code>s[0]</code>，防止数组越界。</p>
+<h2 id="_3">如何转移</h2>
+<p>好串定义为每个偶数位与其后一位字符相同，显然，一个好串加上两个相同的字符仍是一个好串。</p>
+<p>从 <code>i = 1</code> 开始枚举，初始化 <code>f[1] = 1</code>。</p>
+<p>当 <code>i &gt; 1</code> 时</p>
+<ol>
+<li>
+<p><code>f[i]</code> 可从 <code>last[str[i]]</code> 转移过来，为<code>f[该字符上一次出现的位置 - 1] + 1</code>，即 <code>f[i] = f[last[str[i]] - 1] + 1</code> 。</p>
+</li>
+<li>
+<p>也可以不选<code>str[i]</code>，即为 <code>f[i] = f[i - 1]</code>。</p>
+</li>
+<li>
+<p>两者取 <code>max</code> 即可。</p>
+</li>
+</ol>
+<p>得到状态转移方程：<code>f[i] = max(f[last[str[i] - 'a'] - 1] + 1, f[i - 1]);</code></p>
+<p>这样，<code>f[n]</code> 就表示 (最长好串长度 - 1) / 2。输出<code>strlen(str) - (f[n] * 2 - 1)</code>即可。</p>
+<h2 id="_4">完整代码</h2>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int N = 1e6 + 10;
+
+string str;
+int len, f[N], last[30];
+int main()
+{
+    cin &gt;&gt; str;
+    len = str.size();
+    str = ' ' + str;
+
+    for (char i = 'a'; i &lt;= 'z'; ++i)
+        last[i - 'a'] = 1;
+
+    for (int i = 1; i &lt;= len; ++i)
+    {
+        f[i] = max(f[last[str[i] - 'a'] - 1] + 1,f[i - 1]);
+        last[str[i] - 'a'] = i;
+    }
+    printf(&quot;%d&quot;, len - f[len] * 2 + 1);
+    return 0;
+}
 </code></pre>
-<p>不易发现的错误点在于，当 <code>scanf("%d", &amp;a[n++]);</code> 读不到值时，循环终止，<strong>此时 n 为数组元素个数 + 2</strong>， 需要 <code>n -= 2</code>。</p>
-<p><strong>无向图存边数组开双倍空间（警钟敲烂）</strong></p>
+<p>咕咕咕</p>
 
 
 
