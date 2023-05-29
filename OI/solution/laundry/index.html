@@ -49,18 +49,6 @@
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-  
-  
-
-
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-124485594-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
-  
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-  
 
     
     
@@ -836,96 +824,168 @@
 
   <h1>8.21 T3 laundry</h1>
 
-<h3 id="t3-laundry"><span class="arithmatex">\(T3\ \ laundry\)</span></h3>
+<h3 id="t3-laundry"><span class="arithmatex">\(T3\ \ laundry\)</span><a class="headerlink" href="#t3-laundry" title="Permanent link">&para;</a></h3>
 <p>该题主要运用贪心思路：</p>
 <p>洗衣服用时最大的和烘干衣服用时最小的结合，方案最优</p>
 <p>可以建两个优先队列，队内从小到大排序，一次正序取，另一次倒序取  </p>
 <p>由于我结构体用了一半，懒得改了，所有的结构体都可以换成 pair ，但可读性较差 </p>
 <p>第 6 行等同于  </p>
-<pre><code class="language-cpp">#define ll long long 
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#define ll long long </span>
+</code></pre></div></td></tr></table></div>
 <p>第 11 ~ 14 行，第 17 ~ 21 行，使用 pair 则可以省去  </p>
 <p>第 52 ~ 55 行较难理解，其意思是：对于第 <span class="arithmatex">\(i\)</span> 台洗衣机，洗第 <span class="arithmatex">\(k\)</span> 件衣服要花 <span class="arithmatex">\(w_i \times k\)</span> 的时间，因为一台洗衣机不能同时洗两件衣服，所以第 <span class="arithmatex">\(k\)</span> 件衣服还需等待前 <span class="arithmatex">\(k - 1\)</span> 件衣服洗完，即等待 <span class="arithmatex">\(w_i \times (k - 1)\)</span> 的时间</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;queue&gt;
-#include &lt;algorithm&gt;
-using namespace std;
-typedef long long ll;
-
-struct mach
-{
-    ll now_time; int id;//洗下一件衣服需要的时间（w[i] + 等待时间），编号 
-    mach(ll x, int y)
-    {
-        now_time = x, id = y;
-    }//构造函数 
-};
-
-bool operator &gt; (mach x, mach y)
-{
-    return x.now_time &gt; y.now_time; 
-} //重载运算符，用于优先队列
-//当然，你也可以用 pair 
-
-priority_queue&lt;mach, vector&lt;mach&gt;, greater&lt;mach&gt; &gt; wash, dry;
-//洗衣机，烘干机，从小到大 
-
-ll n, m, l, w[(int)1e7+10], d[(int)1e6+10], _time[(int)1e6+10], ans;
-//_time 存储每件衣服洗完 + 烘干 + 等待所用的时间 
-int main()
-{
-    freopen(&quot;laundry.in&quot;,&quot;r&quot;,stdin);
-    freopen(&quot;laundry.out&quot;,&quot;w&quot;,stdout);
-
-    cin &gt;&gt; l &gt;&gt; n &gt;&gt; m;
-    for (int i = 1; i &lt;= n; i++)
-    {
-        cin &gt;&gt; w[i]; 
-        wash.push(mach(w[i], i));
-    }
-    for (int i = 1; i &lt;= m; i++)
-    {
-        cin &gt;&gt; d[i];
-        dry.push(mach(d[i], i));
-    }
-    //输入，按从小到大排列 
-
-    for (int i = 1; i &lt;= l; i++)//从第一件到第 l 件衣服 
-    {
-        ll tmp_time = wash.top().now_time;
-        int tmp_id = wash.top().id;
-        wash.pop();
-        //取出队首衣服 
-        _time[i] = tmp_time;
-        //第 i 件衣服洗完 + 等待的时间 
-        //该洗衣机洗下一件衣服需要等待该件衣服洗完，故加上洗该件衣服所需时间
-        wash.push(mach(tmp_time + w[tmp_id], tmp_id));
-    }
-    for(int i = l; i &gt;= 1; i--)//从 l 件衣服到第 1 件衣服
-    //这样就保证了洗衣服用时最小的和烘干衣服用时最大的结合 
-    {
-        ll tmp_time = dry.top().now_time;
-        int tmp_id = dry.top().id;
-        dry.pop();
-        //取出队首衣服 
-        _time[i] += tmp_time;
-        //第 i 件衣服洗完 + 烘干 + 等待的时间 
-        //该烘干机烘干下一件衣服需要等待该件衣服烘干完，故加上烘干该件衣服所需时间 
-        dry.push(mach(tmp_time + d[tmp_id], tmp_id));
-        ans = max(ans, _time[i]);//最大的即为答案 
-    }
-    cout &lt;&lt; ans;
-
-    fclose(stdin);
-    fclose(stdout);
-    return 0;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span>
+<span class="normal"><a href="#__codelineno-1-44">44</a></span>
+<span class="normal"><a href="#__codelineno-1-45">45</a></span>
+<span class="normal"><a href="#__codelineno-1-46">46</a></span>
+<span class="normal"><a href="#__codelineno-1-47">47</a></span>
+<span class="normal"><a href="#__codelineno-1-48">48</a></span>
+<span class="normal"><a href="#__codelineno-1-49">49</a></span>
+<span class="normal"><a href="#__codelineno-1-50">50</a></span>
+<span class="normal"><a href="#__codelineno-1-51">51</a></span>
+<span class="normal"><a href="#__codelineno-1-52">52</a></span>
+<span class="normal"><a href="#__codelineno-1-53">53</a></span>
+<span class="normal"><a href="#__codelineno-1-54">54</a></span>
+<span class="normal"><a href="#__codelineno-1-55">55</a></span>
+<span class="normal"><a href="#__codelineno-1-56">56</a></span>
+<span class="normal"><a href="#__codelineno-1-57">57</a></span>
+<span class="normal"><a href="#__codelineno-1-58">58</a></span>
+<span class="normal"><a href="#__codelineno-1-59">59</a></span>
+<span class="normal"><a href="#__codelineno-1-60">60</a></span>
+<span class="normal"><a href="#__codelineno-1-61">61</a></span>
+<span class="normal"><a href="#__codelineno-1-62">62</a></span>
+<span class="normal"><a href="#__codelineno-1-63">63</a></span>
+<span class="normal"><a href="#__codelineno-1-64">64</a></span>
+<span class="normal"><a href="#__codelineno-1-65">65</a></span>
+<span class="normal"><a href="#__codelineno-1-66">66</a></span>
+<span class="normal"><a href="#__codelineno-1-67">67</a></span>
+<span class="normal"><a href="#__codelineno-1-68">68</a></span>
+<span class="normal"><a href="#__codelineno-1-69">69</a></span>
+<span class="normal"><a href="#__codelineno-1-70">70</a></span>
+<span class="normal"><a href="#__codelineno-1-71">71</a></span>
+<span class="normal"><a href="#__codelineno-1-72">72</a></span>
+<span class="normal"><a href="#__codelineno-1-73">73</a></span>
+<span class="normal"><a href="#__codelineno-1-74">74</a></span>
+<span class="normal"><a href="#__codelineno-1-75">75</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;queue&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ll</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="k">struct</span><span class="w"> </span><span class="nc">mach</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">{</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="n">ll</span><span class="w"> </span><span class="n">now_time</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="c1">//洗下一件衣服需要的时间（w[i] + 等待时间），编号 </span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">mach</span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="n">now_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span><span class="c1">//构造函数 </span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">};</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">mach</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">mach</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">{</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">now_time</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">now_time</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">}</span><span class="w"> </span><span class="c1">//重载运算符，用于优先队列</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="c1">//当然，你也可以用 pair </span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">mach</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">mach</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">greater</span><span class="o">&lt;</span><span class="n">mach</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">wash</span><span class="p">,</span><span class="w"> </span><span class="n">dry</span><span class="p">;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="c1">//洗衣机，烘干机，从小到大 </span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="n">ll</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="mf">1e7</span><span class="o">+</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="n">d</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="mf">1e6</span><span class="o">+</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="n">_time</span><span class="p">[(</span><span class="kt">int</span><span class="p">)</span><span class="mf">1e6</span><span class="o">+</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="c1">//_time 存储每件衣服洗完 + 烘干 + 等待所用的时间 </span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="p">{</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="n">freopen</span><span class="p">(</span><span class="s">&quot;laundry.in&quot;</span><span class="p">,</span><span class="s">&quot;r&quot;</span><span class="p">,</span><span class="n">stdin</span><span class="p">);</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="n">freopen</span><span class="p">(</span><span class="s">&quot;laundry.out&quot;</span><span class="p">,</span><span class="s">&quot;w&quot;</span><span class="p">,</span><span class="n">stdout</span><span class="p">);</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">        </span><span class="n">wash</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">mach</span><span class="p">(</span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">i</span><span class="p">));</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">        </span><span class="n">dry</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">mach</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">i</span><span class="p">));</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">    </span><span class="c1">//输入，按从小到大排列 </span>
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a>
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="c1">//从第一件到第 l 件衣服 </span>
+<a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">        </span><span class="n">ll</span><span class="w"> </span><span class="n">tmp_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wash</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">now_time</span><span class="p">;</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wash</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="w">        </span><span class="n">wash</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="w">        </span><span class="c1">//取出队首衣服 </span>
+<a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">        </span><span class="n">_time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp_time</span><span class="p">;</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="w">        </span><span class="c1">//第 i 件衣服洗完 + 等待的时间 </span>
+<a id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="w">        </span><span class="c1">//该洗衣机洗下一件衣服需要等待该件衣服洗完，故加上洗该件衣服所需时间</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="w">        </span><span class="n">wash</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">mach</span><span class="p">(</span><span class="n">tmp_time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">tmp_id</span><span class="p">],</span><span class="w"> </span><span class="n">tmp_id</span><span class="p">));</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="c1">//从 l 件衣服到第 1 件衣服</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="w">    </span><span class="c1">//这样就保证了洗衣服用时最小的和烘干衣服用时最大的结合 </span>
+<a id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60"></a><span class="w">        </span><span class="n">ll</span><span class="w"> </span><span class="n">tmp_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dry</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">now_time</span><span class="p">;</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dry</span><span class="p">.</span><span class="n">top</span><span class="p">().</span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="w">        </span><span class="n">dry</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="w">        </span><span class="c1">//取出队首衣服 </span>
+<a id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="w">        </span><span class="n">_time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">tmp_time</span><span class="p">;</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="w">        </span><span class="c1">//第 i 件衣服洗完 + 烘干 + 等待的时间 </span>
+<a id="__codelineno-1-66" name="__codelineno-1-66"></a><span class="w">        </span><span class="c1">//该烘干机烘干下一件衣服需要等待该件衣服烘干完，故加上烘干该件衣服所需时间 </span>
+<a id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="w">        </span><span class="n">dry</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">mach</span><span class="p">(</span><span class="n">tmp_time</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">tmp_id</span><span class="p">],</span><span class="w"> </span><span class="n">tmp_id</span><span class="p">));</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68"></a><span class="w">        </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="n">_time</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="c1">//最大的即为答案 </span>
+<a id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71"></a>
+<a id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="n">stdin</span><span class="p">);</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73"></a><span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>若还有不理解的，欢迎私信提问</p>
 
-
-  
 
 
 

@@ -49,18 +49,6 @@
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-  
-  
-
-
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-124485594-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
-  
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-  
 
     
     
@@ -868,7 +856,7 @@
   
 
 
-<h1 id="_1">主定理</h1>
+<h1 id="_1">主定理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>假设有递推关系式 <span class="arithmatex">\(T(n) = aT(\frac n b )+ f(n)\)</span>， 其中 <span class="arithmatex">\(T(n)\)</span> 为问题规模， <span class="arithmatex">\(a\)</span> 为递推的子问题的数量，<span class="arithmatex">\(\frac n b\)</span> 为每个子问题的规模（假设每个字问题规模基本一样），<span class="arithmatex">\(f(n)\)</span> 为递推以外进行的计算工作。<span class="arithmatex">\(a \geq 1,b&gt;1\)</span> 且为常数，<span class="arithmatex">\(f(n)\)</span> 为函数，<span class="arithmatex">\(T(n)\)</span> 为非负整数。则有以下结果（分类讨论）</p>
 <ol>
 <li>
@@ -881,7 +869,7 @@
 <p>若 <span class="arithmatex">\(f(n) = \Omega(n^{\log_b a+\varepsilon})\)</span> ，<span class="arithmatex">\(\varepsilon &gt; 0\)</span> ，且对于某个常数 <span class="arithmatex">\(c &lt; 1\)</span> 和所有充分大的 <span class="arithmatex">\(n\)</span>，有 <span class="arithmatex">\(af(\frac n b) \leq cf(n)\)</span> ，那么 <span class="arithmatex">\(T(n) = \Theta(f(n))\)</span></p>
 </li>
 </ol>
-<h2 id="_2">人话翻译</h2>
+<h2 id="_2">人话翻译<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>找出 <span class="arithmatex">\(a, b\)</span>，计算 <span class="arithmatex">\(\log _b a\)</span>。</p>
@@ -906,7 +894,7 @@
 <p>（感谢 @<a href="https://www.luogu.com.cn/user/469356">Anna黛娜</a> 的补充）</p>
 </li>
 </ol>
-<h2 id="_3">实践一下</h2>
+<h2 id="_3">实践一下<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://cdn.luogu.com.cn/upload/image_hosting/t0qvhv6z.png" /></p>
 <ol>
 <li>
@@ -922,7 +910,7 @@
 <p><span class="arithmatex">\(a = 2, b = 2, \log_2 2 = 1, k = 1.5.\log_b a &lt; k\)</span>，适用于主定理第三种情况，<span class="arithmatex">\(T(n) = \Theta(f(n)) = \Theta(n\sqrt n)\)</span>。</p>
 </li>
 </ol>
-<h2 id="_4">还有一点</h2>
+<h2 id="_4">还有一点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>$T(n) = 2^n T(\frac n 2) + n^n $</li>
 </ol>
@@ -941,11 +929,11 @@
 <blockquote>
 <p>某算法的计算时间表示为递推关系式 <span class="arithmatex">\(T(n) = T(n - 1) + n\)</span>（<span class="arithmatex">\(n \in N^*\)</span> ）及 <span class="arithmatex">\(T(0)=1\)</span>，则该算法的时间复杂度为（<span class="arithmatex">\({\color{green}D}\)</span>）。</p>
 <p>A. <span class="arithmatex">\(O(\log n)\)</span><br />
-B. $O(n\log n) $<br />
+B. <span class="arithmatex">\(O(n\log n)\)</span><br />
 C. <span class="arithmatex">\(O(n)\)</span><br />
 D. <span class="arithmatex">\(O(n^2)\)</span></p>
-<p>解析：<strong>此处不满足主定理</strong>
-$ \therefore n + (n - 1) + (n - 2) + ... +1 = \sum\limits_{i = 1}^n i = \frac{(1+n)n}2 $
+<p>解析：<strong>此处不满足主定理</strong>，
+<span class="arithmatex">\(\therefore n + (n - 1) + (n - 2) + ... +1 = \sum\limits_{i = 1}^n i = \frac{(1+n)n}2\)</span>
 取最高项次数，复杂度为 <span class="arithmatex">\(O(n^2)\)</span>。</p>
 </blockquote>
 <ol>
@@ -982,8 +970,6 @@ $ \therefore n + (n - 1) + (n - 2) + ... +1 = \sum\limits_{i = 1}^n i = \frac{(1
 <p>如有不足之处，恳请斧正。</p>
 <p><del>轻喷</del></p>
 
-
-  
 
 
 

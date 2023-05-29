@@ -49,18 +49,6 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-  
-  
-
-
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-124485594-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
-  
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-  
 
     
     
@@ -792,7 +780,7 @@
   
 
 
-<h1 id="_1">夕花早逝</h1>
+<h1 id="_1">夕花早逝<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>局部变量可能会屏蔽全局变量（变量<strong>定两回</strong>）</p>
 <p><code>unsigned long long</code> 占位符是 <code>lu</code>，<code>short</code> 占位符是 <code>hd</code></p>
 <p><code>++i, ++j, --i, --j</code> </p>
@@ -806,13 +794,11 @@
 <p>如果 <code>sort</code> 很悬，使用 <code>stable_sort</code> 或 <code>merge</code></p>
 <p>谨防<strong>不明意义变量</strong>，<strong>重名变量</strong>（如 <code>l</code> 和 <code>t[p].l</code>），<strong>分不清的变量</strong>（如 <code>ii, ij, jj, ji</code>）</p>
 <p>观察如下代码片段</p>
-<pre><code class="language-cpp">while (scanf(&quot;%d&quot;, &amp;a[n++]) != EOF);
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">++</span><span class="p">])</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">EOF</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <p>不易发现的错误点在于，当 <code>scanf("%d", &amp;a[n++]);</code> 读不到值时，循环终止，<strong>此时 n 为数组元素个数 + 2</strong>， 需要 <code>n -= 2</code>。</p>
 <p><strong>无向图存边数组开双倍空间（警钟敲烂）</strong></p>
 
-
-  
 
 
 

@@ -49,18 +49,6 @@
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-  
-
-
-  
-  
-
-
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-124485594-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
-  
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-  
 
     
     
@@ -1228,11 +1216,11 @@
   
 
 
-<h1 id="c-stl">C++ STL</h1>
+<h1 id="c-stl">C++ STL<a class="headerlink" href="#c-stl" title="Permanent link">&para;</a></h1>
 <p>Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 / 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（Dev 还不支持 C++14）</p>
 <p>不声明下，区间均为<a href="https://www.cnblogs.com/CNLayton/p/14931381.html">左闭右开区间</a>，<code>typename</code> 表示一个数据类型而不是 C++ 的关键字</p>
-<h2 id="containter">Containter（容器）</h2>
-<h3 id="vector">vector</h3>
+<h2 id="containter">Containter（容器）<a class="headerlink" href="#containter" title="Permanent link">&para;</a></h2>
+<h3 id="vector">vector<a class="headerlink" href="#vector" title="Permanent link">&para;</a></h3>
 <p><code>vector&lt;typename&gt; v</code>：声明一个内部元素为 <code>typename</code> 的可变长度数组 v</p>
 <p><code>v.begin()</code>：返回 v 首元素的迭代器</p>
 <p><code>v.end()</code>：返回 v 尾元素后一个的迭代器</p>
@@ -1254,32 +1242,49 @@
 <p><code>v.reverse(k)</code>：改变 v 实际占用空间为 k，若 k &lt; capacity，忽略</p>
 <p><code>v.clear()</code>：将所有元素置零，<strong>并不释放空间</strong></p>
 <p>如欲释放空间</p>
-<pre><code class="language-cpp">void ClearV(vector&lt;int&gt; &amp;a)
-{
-    vector&lt;int&gt; b;
-    b.swap(a);
-}
-ClearV(a);
-//当然，a现在不能使用了
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">ClearV</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">b</span><span class="p">.</span><span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">ClearV</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">//当然，a现在不能使用了</span>
+</code></pre></div></td></tr></table></div>
 <p>遍历（C++11及以上）（CSP已支持 C++14）</p>
-<pre><code class="language-cpp">for (auto i : a)
-{
-    cout &lt;&lt; i;
-}//此方法中i的改变并不会改变a中的值
-
-for (auto &amp;&amp;i : a)
-{
-    cout &lt;&lt; i;
-}//此方法中i的改变会改变a中的值
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">}</span><span class="c1">//此方法中i的改变并不会改变a中的值</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span><span class="c1">//此方法中i的改变会改变a中的值</span>
+</code></pre></div></td></tr></table></div>
 <p>C++11以下</p>
-<pre><code class="language-cpp">for (vector&lt;int&gt;::iterator it = a.begin(); it != v.end(); ++it)
-{
-    cout &lt;&lt; (*it);
-}
-</code></pre>
-<h3 id="priority_queue">priority_queue</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;::</span><span class="n">iterator</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">it</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="priority_queue">priority_queue<a class="headerlink" href="#priority_queue" title="Permanent link">&para;</a></h3>
 <p>定义：</p>
 <ol>
 <li>小根堆：</li>
@@ -1289,27 +1294,43 @@ for (auto &amp;&amp;i : a)
 <li>大根堆：<code>priority_queue&lt;typename&gt;;</code></li>
 </ol>
 <p>小根堆定义中第三个参数为小于比较方式，大根堆可重载运算符变为小根堆</p>
-<pre><code class="language-cpp">struct Node
-{
-    int a, b;
-    bool operator&lt;(const Node &amp;ovo) const
-    {
-        return this-&gt;b &lt; ovo.b;
-    }
-};
-priority_queue&lt;Node&gt; Q;//按照b从大到小排
-</code></pre>
-<pre><code class="language-cpp">struct Node
-{
-    int a, b;
-    bool operator&lt;(const Node &amp;ovo) const
-    {
-        return this-&gt;b &gt; o.b;
-    }
-};
-priority_queue&lt;Node&gt; Q;//按照b从小到大排
-</code></pre>
-<h3 id="set">set</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ovo</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">ovo</span><span class="p">.</span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">};</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span><span class="c1">//按照b从大到小排</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ovo</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">};</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span><span class="c1">//按照b从小到大排</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="set">set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h3>
 <p>集合（每个元素只会出现一次）</p>
 <p>内部使用红黑树实现，有序。</p>
 <p>定义：<code>set&lt;typename&gt; a;</code></p>
@@ -1323,40 +1344,52 @@ priority_queue&lt;Node&gt; Q;//按照b从小到大排
 <p><code>a.upper_bound()</code>：找最小的 <span class="arithmatex">\(&gt; x\)</span> 的数</p>
 <p><code>insert,erase</code> 单次 <span class="arithmatex">\(O(\log n)\)</span></p>
 <p>遍历均摊 <span class="arithmatex">\(O(n)\)</span></p>
-<h3 id="multiset">multiset</h3>
+<h3 id="multiset">multiset<a class="headerlink" href="#multiset" title="Permanent link">&para;</a></h3>
 <p>允许集合中有重复元素</p>
 <p>定义：<code>multiset&lt;typename&gt; a;</code></p>
 <p><code>a.erase(x)</code>：删除所有等于 x 的值</p>
 <p><code>a.erase(iterator)</code>：删除 <code>iterator</code> 所指向的元素</p>
 <p>例：</p>
-<pre><code class="language-cpp">multiset&lt;int&gt; a;
-a.insert(1), a.insert(1), a.insert(4);
-a.insert(5), a.insert(1), a.insert(4);
-a.erase(1); //set 还剩下 {4, 5, 4};
-a.erase(a.find(1)); //set 还剩下 {1, 4, 5, 1, 4}
-</code></pre>
-<h3 id="unordered_set">unordered_set</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">multiset</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">a</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">a</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">a</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//set 还剩下 {4, 5, 4};</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">a</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="w"> </span><span class="c1">//set 还剩下 {1, 4, 5, 1, 4}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="unordered_set">unordered_set<a class="headerlink" href="#unordered_set" title="Permanent link">&para;</a></h3>
 <p>定义：<code>unordered_set&lt;typename&gt; a;</code></p>
 <p>通过 hash 实现，常数大，内部无序，期望复杂度 <span class="arithmatex">\(O(1)\)</span>，上界 <span class="arithmatex">\(O(n)\)</span>（会被卡）</p>
-<h3 id="map">map</h3>
+<h3 id="map">map<a class="headerlink" href="#map" title="Permanent link">&para;</a></h3>
 <p>定义：<code>map&lt;typename1, typename2&gt; m;</code></p>
 <p>等价于 <code>set&lt;pair&lt;typename1, typename2&gt; &gt; m;</code></p>
 <p>遍历</p>
-<pre><code class="language-cpp">map&lt;string, bool&gt; m;
-m[&quot;I AK IOI&quot;] = false;
-for (auto &amp;&amp;u : m)
-{
-    u.first;//&quot;IAKIOI&quot;
-    u.second;//false
-    cout &lt;&lt; m[&quot;hsbhzz AK IOI&quot;];
-    //生成m[&quot;hsbhzz AK IOI&quot;],值为false;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span>
+<span class="normal"><a href="#__codelineno-6-8">8</a></span>
+<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">m</span><span class="p">[</span><span class="s">&quot;I AK IOI&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">first</span><span class="p">;</span><span class="c1">//&quot;IAKIOI&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="n">second</span><span class="p">;</span><span class="c1">//false</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">m</span><span class="p">[</span><span class="s">&quot;hsbhzz AK IOI&quot;</span><span class="p">];</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="c1">//生成m[&quot;hsbhzz AK IOI&quot;],值为false;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><code>m.count(x)</code>：返回 <code>bool</code> ，x 是否存在</p>
-<h3 id="unordered_map">unordered_map</h3>
+<h3 id="unordered_map">unordered_map<a class="headerlink" href="#unordered_map" title="Permanent link">&para;</a></h3>
 <p>通过 <code>hash</code> 实现，期望复杂度 <span class="arithmatex">\(O(1)\)</span></p>
 <p>定义：<code>unordered_map&lt;typename1, typename2&gt; m;</code></p>
-<h3 id="bitset">bitset</h3>
+<h3 id="bitset">bitset<a class="headerlink" href="#bitset" title="Permanent link">&para;</a></h3>
 <p>本质是一个长度非常长的 <code>bool</code> 数组,一位占用一个 bit</p>
 <p><code>bitset&lt;n&gt; a</code> 生成一个 n 位的 <code>bitset</code></p>
 <p><code>b.set(pos, value)</code>：把第 pos 位修改为 value</p>
@@ -1364,115 +1397,137 @@ for (auto &amp;&amp;u : m)
 <p>支持位运算</p>
 <p>单点修改 <span class="arithmatex">\(O(1)\)</span></p>
 <p>位运算 <span class="arithmatex">\(O(n/\text{字长})\)</span> 32位或64位</p>
-<h3 id="pair">pair</h3>
+<h3 id="pair">pair<a class="headerlink" href="#pair" title="Permanent link">&para;</a></h3>
 <p>位于 <code>&lt;utility&gt;</code> 库中（被 <code>&lt;algorithm&gt;</code> 包含）</p>
 <p><code>pair&lt;string, int&gt; a</code> 声明一个 <code>first</code> 为 <code>string</code>，<code>second</code> 为 <code>int</code> 的二元组 a</p>
 <p>已定义默认比较器，<code>first</code> 第一关键字，<code>second</code> 第二关键字</p>
-<h2 id="algorithm">Algorithm（算法）</h2>
-<h3 id="cincout">cin/cout读入优化（关闭流同步）</h3>
+<h2 id="algorithm">Algorithm（算法）<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="cincout">cin/cout读入优化（关闭流同步）<a class="headerlink" href="#cincout" title="Permanent link">&para;</a></h3>
 <p>比快读快（by：一扶苏一）</p>
 <p><strong>警告！！！：在 <code>freopen()</code> 之后再写关闭流同步！！！</strong></p>
 <p>热知识：<code>return 0;</code> 会自动 <code>fclose();</code></p>
-<pre><code class="language-cpp">//cin, cout 关闭流同步
-ios::sync_sith_stdio(false);
-cin.tie(nullptr); cout.tie(nullptr);
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">//cin, cout 关闭流同步</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">ios</span><span class="o">::</span><span class="n">sync_sith_stdio</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span><span class="w"> </span><span class="n">cout</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="k">nullptr</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <p>使用后 <code>cin</code> 和 <code>printf</code> 不可混用, <code>cout</code> 和 <code>scanf</code> 不可混用</p>
 <p>使用 <code>endl</code> 会导致加速效果消失，建议使用 <code>'\n'</code></p>
 <p>当然，可以同时使用 <code>cin</code> 和 <code>printf</code>，或 <code>cout</code> 和 <code>scanf</code></p>
-<h3 id="nth_element">nth_element</h3>
+<h3 id="nth_element">nth_element<a class="headerlink" href="#nth_element" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(O(n)\)</span></p>
 <p><code>nth_element(a.begin(),a.begin() + k - 1, a.end());</code></p>
 <p>作用：找到一个<strong>无序数列</strong>第k小的数</p>
 <p>会把第 k 小的数放在返回的迭代器的位置上，并使该位置左边的数都小于该数，该位置右边的数都大于该数</p>
-<h3 id="next_permutation">next_permutation</h3>
+<h3 id="next_permutation">next_permutation<a class="headerlink" href="#next_permutation" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(O(n)\)</span></p>
 <p><code>next_permutation(a.begin(), a.end());</code></p>
 <p>生成给定数列的严格下一个排列</p>
-<pre><code class="language-cpp">//枚举全排列要用do-while(毕竟还包含这个序列本身)
-do
-{
-    //do sth
-}while (next_permutation(a, a + i);
-</code></pre>
-<h3 id="generate">generate</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">//枚举全排列要用do-while(毕竟还包含这个序列本身)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">do</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="c1">//do sth</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">next_permutation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="generate">generate<a class="headerlink" href="#generate" title="Permanent link">&para;</a></h3>
 <p><code>generate(a.begin(), a.end(), ACTIVE);</code></p>
 <p>返回 <code>void</code></p>
 <p>作用：以 <code>ACTIVE</code> 的结果填充 <span class="arithmatex">\([\ a.begin(), a.end()\ )\)</span> 的元素内容</p>
-<h3 id="generate_n">generate_n</h3>
+<h3 id="generate_n">generate_n<a class="headerlink" href="#generate_n" title="Permanent link">&para;</a></h3>
 <p><code>generate_n(a.begin(), n, ACTIVE);</code></p>
 <p>返回一个迭代器</p>
 <p>作用：以 <code>ACTIVE</code> 的结果填充 <span class="arithmatex">\([\ a.begin(),a.begin()+n\ ]\)</span> 的元素内容</p>
 <p>beautifully，你可以把自己写的快读放进去</p>
 <p>例：</p>
-<pre><code class="language-cpp">int read(void);
-generate(a, a + n, read);
-//等价于
-generate_n(a, n, read);
-//还等价于
-for (int i = 0; i &lt; n; ++i) a[i] = read();
-</code></pre>
-<h3 id="__gcd">__gcd</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">generate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">read</span><span class="p">);</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1">//等价于</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">generate_n</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">read</span><span class="p">);</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="c1">//还等价于</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="__gcd">__gcd<a class="headerlink" href="#__gcd" title="Permanent link">&para;</a></h3>
 <p>时间复杂度没有查</p>
 <p><code>__gcd(a, b);</code></p>
 <p>作用：返回 <span class="arithmatex">\(\gcd(a,b)\)</span></p>
-<h3 id="maxinitializer_list-mininitializer_list">max({initializer_list}), min({initializer_list})</h3>
+<h3 id="maxinitializer_list-mininitializer_list">max({initializer_list}), min({initializer_list})<a class="headerlink" href="#maxinitializer_list-mininitializer_list" title="Permanent link">&para;</a></h3>
 <p>initializer list  [ɪˈnɪʃəˌlaɪzər  lɪst]  n.初始值列表</p>
 <p>盲猜 <span class="arithmatex">\(O(n)\)</span></p>
 <p>作用：返回 <code>initializer_list</code> 中的最大，最小值</p>
 <p>例 <code>x = max({1, 2, 3, 4, 5, 114514, 1919810});//x = 1919810</code></p>
-<h3 id="reverse">reverse</h3>
+<h3 id="reverse">reverse<a class="headerlink" href="#reverse" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(O(n)\)</span></p>
 <p><code>reverse(a.begin(), a.end());</code></p>
 <p>作用：翻转给定数列</p>
-<pre><code class="language-cpp">string v = &quot;114514&quot;;
-std::reverse(v.begin(), v.end());
-// v = 415411
-</code></pre>
-<h3 id="lower_bound">lower_bound</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">string</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;114514&quot;</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">std</span><span class="o">::</span><span class="n">reverse</span><span class="p">(</span><span class="n">v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="c1">// v = 415411</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="lower_bound">lower_bound<a class="headerlink" href="#lower_bound" title="Permanent link">&para;</a></h3>
 <p><code>lower_bound(a.begin(), a.end(), x);</code></p>
 <p><strong>使用前需保证数列有序</strong></p>
 <p><span class="arithmatex">\(O(\log n)\)</span></p>
 <p>作用：找 <span class="arithmatex">\([\ a.begin(), a.end()\ )\)</span> 中第一个 <span class="arithmatex">\(\geq x\)</span> 的数</p>
-<h3 id="upper_bound">upper_bound</h3>
+<h3 id="upper_bound">upper_bound<a class="headerlink" href="#upper_bound" title="Permanent link">&para;</a></h3>
 <p>同上</p>
 <p>作用：找序列中第一个 <span class="arithmatex">\(&gt;x\)</span> 的数</p>
-<h3 id="unique">unique</h3>
+<h3 id="unique">unique<a class="headerlink" href="#unique" title="Permanent link">&para;</a></h3>
 <p><code>unique(a.begin(), a.end());</code></p>
 <p>作用：把一个<strong>有序序列</strong>去重，返回去重后数列的尾指针 + 1;</p>
 <p>如果是结构体，需要重载运算符 <code>==</code></p>
-<pre><code class="language-cpp">struct Node 
-{
-    int a, b;
-}
-bool operator==(Node x, Node y)
-{
-    return x.a == y.a &amp;&amp; x.b == y.b;
-}
-//重载运算符不太确定, 应该是可以的
-//我也不会在结构体里重载(丢人现眼)
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C++</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="p">}</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">.</span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">}</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="c1">//重载运算符不太确定, 应该是可以的</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="c1">//我也不会在结构体里重载(丢人现眼)</span>
+</code></pre></div></td></tr></table></div>
 <p>多的元素其实被<strong>放到了序列末尾</strong></p>
 <p>去重后元素的个数为 <code>unique(a.begin(), a.end()) - a.begin();</code></p>
-<h3 id="sortlambada">sort(lambada引出符[])</h3>
+<h3 id="sortlambada">sort(lambada引出符[])<a class="headerlink" href="#sortlambada" title="Permanent link">&para;</a></h3>
 <p><code>sort(v.begin(), v.end(), [](const int &amp;a, const int &amp;b) {return a &gt; b;});</code></p>
 <p>不用写函数，减少码量（）</p>
 <p><code>sort</code> 复杂度会被卡到 <span class="arithmatex">\(O(n^2)\)</span>，平均时间复杂度 <span class="arithmatex">\(O(n\log n)\)</span></p>
 <p>若需要稳定排序（即相等元素排序后不改变顺序）可使用 <code>stable_sort()</code>，其内部基于归并排序，时间复杂度为稳定的 <span class="arithmatex">\(O(\log n)\)</span></p>
-<h3 id="fill">fill</h3>
+<h3 id="fill">fill<a class="headerlink" href="#fill" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(O(n)\)</span></p>
 <p><code>memset()</code> 按字节填充，故不能初始化诸如 1 等数字</p>
 <p><code>fill(a.begin(), a.end(), FILL_NUM);</code></p>
 <p>作用：把数列中的每一个元素初始化为 <code>FILL_NUM</code></p>
-<h3 id="count">count</h3>
+<h3 id="count">count<a class="headerlink" href="#count" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\(O(n)\)</span></p>
 <p><code>count(a.begin(), a.end(), COUNT_NUM);</code></p>
 <p>作用：返回 <code>COUNT_NUM</code> 出现的次数</p>
-<h2 id="cmath">cmath库</h2>
+<h2 id="cmath">cmath库<a class="headerlink" href="#cmath" title="Permanent link">&para;</a></h2>
 <p><code>sqrt</code> 支持 <code>double</code>，<code>sqrtl</code> 支持 <code>long double</code></p>
 <p><code>abs</code> 支持 <code>int</code>，<code>llabs</code> 支持 <code>long long</code> 等等</p>
 <p>可在 Dev-C++ 中输入函数，在输括号时会弹出其形参列表，便于查看</p>
-<h2 id="_1">一扶苏一 的简单说一说</h2>
+<h2 id="_1">一扶苏一 的简单说一说<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>你的短板一般分三种</p>
 <ol>
 <li>
@@ -1529,8 +1584,6 @@ bool operator==(Node x, Node y)
 <p>OS：衡水。。。</p>
 <p>听课的时候打笔记累到手抽筋，<del>狂打 2000 字</del>，改 markdown 的时候 marktext 崩了，Firefox 崩了五次。。。</p>
 
-
-  
 
 
 
