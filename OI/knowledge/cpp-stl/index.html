@@ -1,0 +1,1585 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Hszzzx">
+      
+      
+      
+        <link rel="prev" href="../exgcd/">
+      
+      
+        <link rel="next" href="../../solution/laundry/">
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+    
+    
+      
+        <title>C++ STL - Hszzzx's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../_static/css/extra.css?v=14">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-124485594-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c-stl" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Hszzzx&#39;s Blog" class="md-header__button md-logo" aria-label="Hszzzx's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hszzzx's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C++ STL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Hszzzx/Hszzzx.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Hszzzx/Hszzzx.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exgcd/" class="md-tabs__link md-tabs__link--active">
+        OI
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../passage/program-life/" class="md-tabs__link">
+        文章
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hszzzx&#39;s Blog" class="md-nav__button md-logo" aria-label="Hszzzx's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82Z"/></svg>
+
+    </a>
+    Hszzzx's Blog
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Hszzzx/Hszzzx.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Hszzzx/Hszzzx.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          OI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          OI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          知识点
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          知识点
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exgcd/" class="md-nav__link">
+        扩展欧几里得
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+          最短路
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          最短路
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shortest-path/single-source-shortest-path.md" class="md-nav__link">
+        单源最短路径
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C++ STL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        C++ STL
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containter" class="md-nav__link">
+    Containter（容器）
+  </a>
+  
+    <nav class="md-nav" aria-label="Containter（容器）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority_queue" class="md-nav__link">
+    priority_queue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiset" class="md-nav__link">
+    multiset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered_set" class="md-nav__link">
+    unordered_set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered_map" class="md-nav__link">
+    unordered_map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitset" class="md-nav__link">
+    bitset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pair" class="md-nav__link">
+    pair
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm（算法）
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm（算法）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cincout" class="md-nav__link">
+    cin/cout读入优化（关闭流同步）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth_element" class="md-nav__link">
+    nth_element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next_permutation" class="md-nav__link">
+    next_permutation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate" class="md-nav__link">
+    generate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_n" class="md-nav__link">
+    generate_n
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__gcd" class="md-nav__link">
+    __gcd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxinitializer_list-mininitializer_list" class="md-nav__link">
+    max({initializer_list}), min({initializer_list})
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    reverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lower_bound" class="md-nav__link">
+    lower_bound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper_bound" class="md-nav__link">
+    upper_bound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique" class="md-nav__link">
+    unique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortlambada" class="md-nav__link">
+    sort(lambada引出符[])
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill" class="md-nav__link">
+    fill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmath" class="md-nav__link">
+    cmath库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一扶苏一 的简单说一说
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          题解
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          题解
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/laundry/" class="md-nav__link">
+        8.21 T3 laundry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/10-3/" class="md-nav__link">
+        10.3 考试
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solution/10-6/" class="md-nav__link">
+        10.6 考试
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          初赛
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          初赛
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chusai/csp-j1-knowledge/" class="md-nav__link">
+        CSP-J 初赛知识点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chusai/csp-j1-wrong/" class="md-nav__link">
+        CSP-J 初赛错题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chusai/master-theorem/" class="md-nav__link">
+        主定理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wrong/" class="md-nav__link">
+        夕花早逝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          游记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          游记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../travels/csp-j-2022/" class="md-nav__link">
+        CSP-J 2022 游寄
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          文章
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          文章
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../passage/program-life/" class="md-nav__link">
+        程序人生
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../passage/we-are-oiers/" class="md-nav__link">
+        我们是 OIer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../passage/qinshi/" class="md-nav__link">
+        琴师
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../passage/politics-physics/" class="md-nav__link">
+        政治和物理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#containter" class="md-nav__link">
+    Containter（容器）
+  </a>
+  
+    <nav class="md-nav" aria-label="Containter（容器）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector" class="md-nav__link">
+    vector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority_queue" class="md-nav__link">
+    priority_queue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiset" class="md-nav__link">
+    multiset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered_set" class="md-nav__link">
+    unordered_set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unordered_map" class="md-nav__link">
+    unordered_map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitset" class="md-nav__link">
+    bitset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pair" class="md-nav__link">
+    pair
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm" class="md-nav__link">
+    Algorithm（算法）
+  </a>
+  
+    <nav class="md-nav" aria-label="Algorithm（算法）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cincout" class="md-nav__link">
+    cin/cout读入优化（关闭流同步）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nth_element" class="md-nav__link">
+    nth_element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next_permutation" class="md-nav__link">
+    next_permutation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate" class="md-nav__link">
+    generate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generate_n" class="md-nav__link">
+    generate_n
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#__gcd" class="md-nav__link">
+    __gcd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxinitializer_list-mininitializer_list" class="md-nav__link">
+    max({initializer_list}), min({initializer_list})
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse" class="md-nav__link">
+    reverse
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lower_bound" class="md-nav__link">
+    lower_bound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upper_bound" class="md-nav__link">
+    upper_bound
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unique" class="md-nav__link">
+    unique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortlambada" class="md-nav__link">
+    sort(lambada引出符[])
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill" class="md-nav__link">
+    fill
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cmath" class="md-nav__link">
+    cmath库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一扶苏一 的简单说一说
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="c-stl">C++ STL</h1>
+<p>Dev-C++ 可在 工具 -&gt; 编译选项 -&gt; 代码生成 / 优化  -&gt; 代码生成 -&gt; 语言标准 中选择 “ISO C++11” 或 “GNU C++11” 来支持 C++11 的新特性（Dev 还不支持 C++14）</p>
+<p>不声明下，区间均为<a href="https://www.cnblogs.com/CNLayton/p/14931381.html">左闭右开区间</a>，<code>typename</code> 表示一个数据类型而不是 C++ 的关键字</p>
+<h2 id="containter">Containter（容器）</h2>
+<h3 id="vector">vector</h3>
+<p><code>vector&lt;typename&gt; v</code>：声明一个内部元素为 <code>typename</code> 的可变长度数组 v</p>
+<p><code>v.begin()</code>：返回 v 首元素的迭代器</p>
+<p><code>v.end()</code>：返回 v 尾元素后一个的迭代器</p>
+<p><code>v.push_back(x)</code>：在 v 尾部插入元素 x</p>
+<p><code>v.size()</code>：返回 v <strong>存储数据个数</strong></p>
+<p><code>v.capacity()</code>：返回 v <strong>实际占用空间</strong></p>
+<p><code>v.resize(k, val)</code>：调整容器 v 的大小，使其包含 k 个元素</p>
+<ol>
+<li>
+<p>如果 n 小于当前容器的大小，则将内容减少到其前n个元素，删除超出范围的元素并销毁它们</p>
+</li>
+<li>
+<p>如果 n 大于当前容器的大小，则通过在末尾插入所需数量的元素来扩展内容，以达到 n的大小。如果指定了val，则将新元素初始化为 val，否则初始化为 0</p>
+</li>
+<li>
+<p>如果 n 也大于当前容器容量 capacity，将自动重新分配已分配的存储空间。</p>
+</li>
+</ol>
+<p><code>v.reverse(k)</code>：改变 v 实际占用空间为 k，若 k &lt; capacity，忽略</p>
+<p><code>v.clear()</code>：将所有元素置零，<strong>并不释放空间</strong></p>
+<p>如欲释放空间</p>
+<pre><code class="language-cpp">void ClearV(vector&lt;int&gt; &amp;a)
+{
+    vector&lt;int&gt; b;
+    b.swap(a);
+}
+ClearV(a);
+//当然，a现在不能使用了
+</code></pre>
+<p>遍历（C++11及以上）（CSP已支持 C++14）</p>
+<pre><code class="language-cpp">for (auto i : a)
+{
+    cout &lt;&lt; i;
+}//此方法中i的改变并不会改变a中的值
+
+for (auto &amp;&amp;i : a)
+{
+    cout &lt;&lt; i;
+}//此方法中i的改变会改变a中的值
+</code></pre>
+<p>C++11以下</p>
+<pre><code class="language-cpp">for (vector&lt;int&gt;::iterator it = a.begin(); it != v.end(); ++it)
+{
+    cout &lt;&lt; (*it);
+}
+</code></pre>
+<h3 id="priority_queue">priority_queue</h3>
+<p>定义：</p>
+<ol>
+<li>小根堆：</li>
+</ol>
+<p><code>priority_queue&lt;typename, vector&lt;typename&gt;, greater&lt;typename&gt; &gt;;</code> <code>greater</code>在 <code>&lt;functional&gt;</code> 库中（被 <code>&lt;algorithm&gt;</code> 和 <code>&lt;queue&gt;</code> 包含）</p>
+<ol>
+<li>大根堆：<code>priority_queue&lt;typename&gt;;</code></li>
+</ol>
+<p>小根堆定义中第三个参数为小于比较方式，大根堆可重载运算符变为小根堆</p>
+<pre><code class="language-cpp">struct Node
+{
+    int a, b;
+    bool operator&lt;(const Node &amp;ovo) const
+    {
+        return this-&gt;b &lt; ovo.b;
+    }
+};
+priority_queue&lt;Node&gt; Q;//按照b从大到小排
+</code></pre>
+<pre><code class="language-cpp">struct Node
+{
+    int a, b;
+    bool operator&lt;(const Node &amp;ovo) const
+    {
+        return this-&gt;b &gt; o.b;
+    }
+};
+priority_queue&lt;Node&gt; Q;//按照b从小到大排
+</code></pre>
+<h3 id="set">set</h3>
+<p>集合（每个元素只会出现一次）</p>
+<p>内部使用红黑树实现，有序。</p>
+<p>定义：<code>set&lt;typename&gt; a;</code></p>
+<p><code>a.begin()</code>：头迭代器</p>
+<p><code>a.end()</code>：尾迭代器</p>
+<p><code>a.insert(x)</code>：插入 x</p>
+<p><code>a.erase(x)</code>：删除 x</p>
+<p><code>a.count(x)</code>：查询 x 是否出现在集合内</p>
+<p><code>a.find(x)</code>：找值为 x 的元素，如果有，返回 x 的迭代器；否则返回 <code>a.end()</code></p>
+<p><code>a.lower_bound()</code>：找最小的 <span class="arithmatex">\(\ge x\)</span> 的数</p>
+<p><code>a.upper_bound()</code>：找最小的 <span class="arithmatex">\(&gt; x\)</span> 的数</p>
+<p><code>insert,erase</code> 单次 <span class="arithmatex">\(O(\log n)\)</span></p>
+<p>遍历均摊 <span class="arithmatex">\(O(n)\)</span></p>
+<h3 id="multiset">multiset</h3>
+<p>允许集合中有重复元素</p>
+<p>定义：<code>multiset&lt;typename&gt; a;</code></p>
+<p><code>a.erase(x)</code>：删除所有等于 x 的值</p>
+<p><code>a.erase(iterator)</code>：删除 <code>iterator</code> 所指向的元素</p>
+<p>例：</p>
+<pre><code class="language-cpp">multiset&lt;int&gt; a;
+a.insert(1), a.insert(1), a.insert(4);
+a.insert(5), a.insert(1), a.insert(4);
+a.erase(1); //set 还剩下 {4, 5, 4};
+a.erase(a.find(1)); //set 还剩下 {1, 4, 5, 1, 4}
+</code></pre>
+<h3 id="unordered_set">unordered_set</h3>
+<p>定义：<code>unordered_set&lt;typename&gt; a;</code></p>
+<p>通过 hash 实现，常数大，内部无序，期望复杂度 <span class="arithmatex">\(O(1)\)</span>，上界 <span class="arithmatex">\(O(n)\)</span>（会被卡）</p>
+<h3 id="map">map</h3>
+<p>定义：<code>map&lt;typename1, typename2&gt; m;</code></p>
+<p>等价于 <code>set&lt;pair&lt;typename1, typename2&gt; &gt; m;</code></p>
+<p>遍历</p>
+<pre><code class="language-cpp">map&lt;string, bool&gt; m;
+m[&quot;I AK IOI&quot;] = false;
+for (auto &amp;&amp;u : m)
+{
+    u.first;//&quot;IAKIOI&quot;
+    u.second;//false
+    cout &lt;&lt; m[&quot;hsbhzz AK IOI&quot;];
+    //生成m[&quot;hsbhzz AK IOI&quot;],值为false;
+}
+</code></pre>
+<p><code>m.count(x)</code>：返回 <code>bool</code> ，x 是否存在</p>
+<h3 id="unordered_map">unordered_map</h3>
+<p>通过 <code>hash</code> 实现，期望复杂度 <span class="arithmatex">\(O(1)\)</span></p>
+<p>定义：<code>unordered_map&lt;typename1, typename2&gt; m;</code></p>
+<h3 id="bitset">bitset</h3>
+<p>本质是一个长度非常长的 <code>bool</code> 数组,一位占用一个 bit</p>
+<p><code>bitset&lt;n&gt; a</code> 生成一个 n 位的 <code>bitset</code></p>
+<p><code>b.set(pos, value)</code>：把第 pos 位修改为 value</p>
+<p><code>b.test(pos)</code>：返回 pos 的 value</p>
+<p>支持位运算</p>
+<p>单点修改 <span class="arithmatex">\(O(1)\)</span></p>
+<p>位运算 <span class="arithmatex">\(O(n/\text{字长})\)</span> 32位或64位</p>
+<h3 id="pair">pair</h3>
+<p>位于 <code>&lt;utility&gt;</code> 库中（被 <code>&lt;algorithm&gt;</code> 包含）</p>
+<p><code>pair&lt;string, int&gt; a</code> 声明一个 <code>first</code> 为 <code>string</code>，<code>second</code> 为 <code>int</code> 的二元组 a</p>
+<p>已定义默认比较器，<code>first</code> 第一关键字，<code>second</code> 第二关键字</p>
+<h2 id="algorithm">Algorithm（算法）</h2>
+<h3 id="cincout">cin/cout读入优化（关闭流同步）</h3>
+<p>比快读快（by：一扶苏一）</p>
+<p><strong>警告！！！：在 <code>freopen()</code> 之后再写关闭流同步！！！</strong></p>
+<p>热知识：<code>return 0;</code> 会自动 <code>fclose();</code></p>
+<pre><code class="language-cpp">//cin, cout 关闭流同步
+ios::sync_sith_stdio(false);
+cin.tie(nullptr); cout.tie(nullptr);
+</code></pre>
+<p>使用后 <code>cin</code> 和 <code>printf</code> 不可混用, <code>cout</code> 和 <code>scanf</code> 不可混用</p>
+<p>使用 <code>endl</code> 会导致加速效果消失，建议使用 <code>'\n'</code></p>
+<p>当然，可以同时使用 <code>cin</code> 和 <code>printf</code>，或 <code>cout</code> 和 <code>scanf</code></p>
+<h3 id="nth_element">nth_element</h3>
+<p><span class="arithmatex">\(O(n)\)</span></p>
+<p><code>nth_element(a.begin(),a.begin() + k - 1, a.end());</code></p>
+<p>作用：找到一个<strong>无序数列</strong>第k小的数</p>
+<p>会把第 k 小的数放在返回的迭代器的位置上，并使该位置左边的数都小于该数，该位置右边的数都大于该数</p>
+<h3 id="next_permutation">next_permutation</h3>
+<p><span class="arithmatex">\(O(n)\)</span></p>
+<p><code>next_permutation(a.begin(), a.end());</code></p>
+<p>生成给定数列的严格下一个排列</p>
+<pre><code class="language-cpp">//枚举全排列要用do-while(毕竟还包含这个序列本身)
+do
+{
+    //do sth
+}while (next_permutation(a, a + i);
+</code></pre>
+<h3 id="generate">generate</h3>
+<p><code>generate(a.begin(), a.end(), ACTIVE);</code></p>
+<p>返回 <code>void</code></p>
+<p>作用：以 <code>ACTIVE</code> 的结果填充 <span class="arithmatex">\([\ a.begin(), a.end()\ )\)</span> 的元素内容</p>
+<h3 id="generate_n">generate_n</h3>
+<p><code>generate_n(a.begin(), n, ACTIVE);</code></p>
+<p>返回一个迭代器</p>
+<p>作用：以 <code>ACTIVE</code> 的结果填充 <span class="arithmatex">\([\ a.begin(),a.begin()+n\ ]\)</span> 的元素内容</p>
+<p>beautifully，你可以把自己写的快读放进去</p>
+<p>例：</p>
+<pre><code class="language-cpp">int read(void);
+generate(a, a + n, read);
+//等价于
+generate_n(a, n, read);
+//还等价于
+for (int i = 0; i &lt; n; ++i) a[i] = read();
+</code></pre>
+<h3 id="__gcd">__gcd</h3>
+<p>时间复杂度没有查</p>
+<p><code>__gcd(a, b);</code></p>
+<p>作用：返回 <span class="arithmatex">\(\gcd(a,b)\)</span></p>
+<h3 id="maxinitializer_list-mininitializer_list">max({initializer_list}), min({initializer_list})</h3>
+<p>initializer list  [ɪˈnɪʃəˌlaɪzər  lɪst]  n.初始值列表</p>
+<p>盲猜 <span class="arithmatex">\(O(n)\)</span></p>
+<p>作用：返回 <code>initializer_list</code> 中的最大，最小值</p>
+<p>例 <code>x = max({1, 2, 3, 4, 5, 114514, 1919810});//x = 1919810</code></p>
+<h3 id="reverse">reverse</h3>
+<p><span class="arithmatex">\(O(n)\)</span></p>
+<p><code>reverse(a.begin(), a.end());</code></p>
+<p>作用：翻转给定数列</p>
+<pre><code class="language-cpp">string v = &quot;114514&quot;;
+std::reverse(v.begin(), v.end());
+// v = 415411
+</code></pre>
+<h3 id="lower_bound">lower_bound</h3>
+<p><code>lower_bound(a.begin(), a.end(), x);</code></p>
+<p><strong>使用前需保证数列有序</strong></p>
+<p><span class="arithmatex">\(O(\log n)\)</span></p>
+<p>作用：找 <span class="arithmatex">\([\ a.begin(), a.end()\ )\)</span> 中第一个 <span class="arithmatex">\(\geq x\)</span> 的数</p>
+<h3 id="upper_bound">upper_bound</h3>
+<p>同上</p>
+<p>作用：找序列中第一个 <span class="arithmatex">\(&gt;x\)</span> 的数</p>
+<h3 id="unique">unique</h3>
+<p><code>unique(a.begin(), a.end());</code></p>
+<p>作用：把一个<strong>有序序列</strong>去重，返回去重后数列的尾指针 + 1;</p>
+<p>如果是结构体，需要重载运算符 <code>==</code></p>
+<pre><code class="language-cpp">struct Node 
+{
+    int a, b;
+}
+bool operator==(Node x, Node y)
+{
+    return x.a == y.a &amp;&amp; x.b == y.b;
+}
+//重载运算符不太确定, 应该是可以的
+//我也不会在结构体里重载(丢人现眼)
+</code></pre>
+<p>多的元素其实被<strong>放到了序列末尾</strong></p>
+<p>去重后元素的个数为 <code>unique(a.begin(), a.end()) - a.begin();</code></p>
+<h3 id="sortlambada">sort(lambada引出符[])</h3>
+<p><code>sort(v.begin(), v.end(), [](const int &amp;a, const int &amp;b) {return a &gt; b;});</code></p>
+<p>不用写函数，减少码量（）</p>
+<p><code>sort</code> 复杂度会被卡到 <span class="arithmatex">\(O(n^2)\)</span>，平均时间复杂度 <span class="arithmatex">\(O(n\log n)\)</span></p>
+<p>若需要稳定排序（即相等元素排序后不改变顺序）可使用 <code>stable_sort()</code>，其内部基于归并排序，时间复杂度为稳定的 <span class="arithmatex">\(O(\log n)\)</span></p>
+<h3 id="fill">fill</h3>
+<p><span class="arithmatex">\(O(n)\)</span></p>
+<p><code>memset()</code> 按字节填充，故不能初始化诸如 1 等数字</p>
+<p><code>fill(a.begin(), a.end(), FILL_NUM);</code></p>
+<p>作用：把数列中的每一个元素初始化为 <code>FILL_NUM</code></p>
+<h3 id="count">count</h3>
+<p><span class="arithmatex">\(O(n)\)</span></p>
+<p><code>count(a.begin(), a.end(), COUNT_NUM);</code></p>
+<p>作用：返回 <code>COUNT_NUM</code> 出现的次数</p>
+<h2 id="cmath">cmath库</h2>
+<p><code>sqrt</code> 支持 <code>double</code>，<code>sqrtl</code> 支持 <code>long double</code></p>
+<p><code>abs</code> 支持 <code>int</code>，<code>llabs</code> 支持 <code>long long</code> 等等</p>
+<p>可在 Dev-C++ 中输入函数，在输括号时会弹出其形参列表，便于查看</p>
+<h2 id="_1">一扶苏一 的简单说一说</h2>
+<p>你的短板一般分三种</p>
+<ol>
+<li>
+<p>思维</p>
+</li>
+<li>
+<p>刷 CF 的题</p>
+</li>
+<li>
+<p>刷 SPOJ GSS（据说是仅次于 ynoi 的毒瘤题，初二的同志们不要再卷了）</p>
+</li>
+<li>
+<p>做题，见识不同的套路</p>
+</li>
+<li>
+<p>做结论题</p>
+</li>
+<li>
+<p>除非实在想不出来，不要看题解（可以复制 Markdown 题面到 marktext一类的阅读器中，将网页最小化）</p>
+</li>
+<li>
+<p>如果看了题解，记住套路，尽量让自己再做到同类题时有思维方向</p>
+</li>
+<li>
+<p>技能树</p>
+</li>
+<li>
+<p>网上学习</p>
+</li>
+<li>
+<p>刷题（模板 2~5 道后尝试锻炼思维的题）</p>
+</li>
+<li>
+<p>不要点的太快（短时间内学习太多技能）</p>
+</li>
+<li>
+<p>代码能力</p>
+</li>
+<li>
+<p>大模拟并不会提升你的代码能力</p>
+</li>
+<li>
+<p>多刷题</p>
+</li>
+<li>
+<p>打模拟赛</p>
+</li>
+</ol>
+<p><a href="https://www.zhihu.com/question/3915533687/answer/1194659474">一扶苏一 的知乎问答（好像没了）</a></p>
+<p><a href="https://www.luogu.com.cn/training/9391">一扶苏一 的推荐题单</a></p>
+<p>P.S.：</p>
+<p>Q：初中学习和OI怎么安排？</p>
+<p>A：看中考卷的程度</p>
+<p>OS：衡水。。。</p>
+<p>听课的时候打笔记累到手抽筋，<del>狂打 2000 字</del>，改 markdown 的时候 marktext 崩了，Firefox 崩了五次。。。</p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2023 Hszzzx
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
